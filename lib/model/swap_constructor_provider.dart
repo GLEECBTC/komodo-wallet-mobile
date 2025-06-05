@@ -112,7 +112,7 @@ class ConstructorProvider extends ChangeNotifier {
             ? _matchingOrder.price
             : _matchingOrder.price.inverse;
 
-        final Rational maxOrderAmt = _matchingOrder.maxVolume / price;
+        final Rational maxOrderAmt = _matchingOrder.maxVolume;
         // if > than order max volume
         if (value > maxOrderAmt) {
           value = maxOrderAmt;
@@ -460,14 +460,14 @@ class ConstructorProvider extends ChangeNotifier {
       }
 
       // if < than order min volume
-      final Rational minOrderVolume = _matchingOrder.minVolume;
+      final Rational price = _matchingOrder.action == Market.SELL
+            ? _matchingOrder.price
+            : _matchingOrder.price.inverse;
+      final Rational minOrderVolume = _matchingOrder.minVolume * price;
       if (minOrderVolume != null &&
           _buyAmount != null &&
           minOrderVolume > _buyAmount) {
         isValid = false;
-        final Rational price = _matchingOrder.action == Market.SELL
-            ? _matchingOrder.price
-            : _matchingOrder.price.inverse;
         final Rational minSellVolume = minOrderVolume / price;
         _error = 'Min order volume is'
             ' ${minSellVolume.toStringAsFixed(appConfig.tradeFormPrecision)}'
