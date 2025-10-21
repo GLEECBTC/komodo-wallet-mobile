@@ -1,8 +1,8 @@
 name: iguana_cage
-description: "A new Flutter project."
+description: "Let that Iguana out of the cage! A migration tool for the Komodo Wallet."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -34,6 +34,25 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+  path_provider: ^2.0.15
+  shared_preferences: ^2.2.2
+  flutter_secure_storage:
+    git:
+      url: https://github.com/KomodoPlatform/flutter_secure_storage.git
+      path: flutter_secure_storage/
+      ref: 26efe91a75228ad8c8626d6eea18f7f3cb21bdd9
+  local_auth: ^2.3.0
+  encrypt: ^5.0.3
+  crypto: ^3.0.5
+  uuid: ^4.4.2
+  dargon2_flutter:
+    git:
+      url: https://github.com/KomodoPlatform/dargon2
+      path: dargon2_flutter/dargon2_flutter/
+      ref: d11f51cab560acf7644ebef402f1996b6f320365 #3.1.0
+  url_launcher: 6.1.5
 
 dev_dependencies:
   flutter_test:
@@ -45,13 +64,22 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "../assets/branding/logo_app.png"
+  image_path_ios: "../assets/branding/ios_app_icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "../assets/branding/ic_launcher.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

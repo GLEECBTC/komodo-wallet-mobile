@@ -12,14 +12,7 @@ class WalletService {
   }
 
   Future<bool> canExportSeed(Wallet wallet) async {
-    // Check if seed phrase exists for this wallet
-    try {
-      final seedExists =
-          await _encryptionTool.read('seed${wallet.name}${wallet.id}') != null;
-      return seedExists;
-    } catch (e) {
-      return false;
-    }
+    return await _encryptionTool.hasEncryptedSeed(wallet);
   }
 
   Future<String?> exportSeedWithPassword(Wallet wallet, String password) async {
@@ -53,15 +46,11 @@ class WalletService {
         throw Exception('Biometric authentication failed');
       }
 
-      // In the legacy app, when biometric auth is used, it reads the stored passphrase
-      // and then uses that to decrypt the seed. Let's follow the same pattern.
+      // In the legacy app, biometric auth unlocks and returns the stored passphrase (seed phrase).
+      // Do not pass the passphrase into the password-based decrypt path.
       final storedPassphrase = await _encryptionTool.read('passphrase');
-      if (storedPassphrase != null) {
-        return await _encryptionTool.readData(
-          KeyEncryption.seed,
-          wallet,
-          storedPassphrase,
-        );
+      if (storedPassphrase != null && storedPassphrase.isNotEmpty) {
+        return storedPassphrase;
       }
 
       throw Exception(
@@ -83,12 +72,8 @@ class WalletService {
 
       // Get the stored passphrase using the PIN validation
       final storedPassphrase = await _encryptionTool.read('passphrase');
-      if (storedPassphrase != null) {
-        return await _encryptionTool.readData(
-          KeyEncryption.seed,
-          wallet,
-          storedPassphrase,
-        );
+      if (storedPassphrase != null && storedPassphrase.isNotEmpty) {
+        return storedPassphrase;
       }
 
       throw Exception('No stored passphrase found');
@@ -110,6 +95,25 @@ class WalletService {
     try {
       final storedPin = await _encryptionTool.read('pin');
       return storedPin != null && storedPin.isNotEmpty;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<bool> isBiometricAvailable() async {
+    try {
+      return await _authService.isBiometricAvailable();
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<bool> isBiometricConfigured() async {
+    try {
+      final available = await _authService.isBiometricAvailable();
+      if (!available) return false;
+      final storedPassphrase = await _encryptionTool.read('passphrase');
+      return storedPassphrase != null && storedPassphrase.isNotEmpty;
     } catch (e) {
       return false;
     }

@@ -1,19 +1,31 @@
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import '../models/wallet.dart';
-import 'package:dargon2_flutter/dargon2_flutter.dart';
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
+import 'package:dargon2_flutter/dargon2_flutter.dart';
 import 'package:encrypt/encrypt.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+import '../models/wallet.dart';
 
 class EncryptionTool {
   final FlutterSecureStorage storage = const FlutterSecureStorage();
 
+  String _legacyKeyName(KeyEncryption key) {
+    switch (key) {
+      case KeyEncryption.seed:
+        return 'KeyEncryption.SEED';
+      case KeyEncryption.pin:
+        return 'KeyEncryption.PIN';
+      case KeyEncryption.camopin:
+        return 'KeyEncryption.CAMOPIN';
+    }
+  }
+
   String keyPassword(KeyEncryption key, Wallet wallet) =>
-      'password${key.toString()}${wallet.name}${wallet.id}';
+      'password${_legacyKeyName(key)}${wallet.name}${wallet.id}';
 
   String keyData(KeyEncryption key, Wallet wallet, String password) =>
-      '${key.toString()}$password${wallet.name}${wallet.id}';
+      '${_legacyKeyName(key)}$password${wallet.name}${wallet.id}';
 
   Future<bool> isPasswordValid(
     KeyEncryption key,
@@ -21,19 +33,36 @@ class EncryptionTool {
     String password,
   ) async {
     if (key == KeyEncryption.seed) {
-      bool isValid = false;
+      final storedHash = await storage.read(key: keyPassword(key, wallet));
+      if (storedHash == null || storedHash.isEmpty) {
+        return false;
+      }
       try {
-        isValid = await argon2.verifyHashString(
+        return await argon2.verifyHashString(
           password,
-          await storage.read(key: keyPassword(key, wallet)) ?? '',
+          storedHash,
           type: Argon2Type.id,
         );
-      } catch (_) {}
-
-      return isValid;
+      } catch (_) {
+        return false;
+      }
     } else {
       return true;
     }
+  }
+
+  Future<bool> hasEncryptedSeed(Wallet wallet) async {
+    final storedHash =
+        await storage.read(key: keyPassword(KeyEncryption.seed, wallet));
+    if (storedHash != null && storedHash.isNotEmpty) {
+      return true;
+    }
+
+    // Legacy fallback: some very old builds stored the seed without hashing
+    // metadata; try to detect that scenario without knowing the password.
+    final legacyKey = 'seed${wallet.name}${wallet.id}';
+    final legacyValue = await storage.read(key: legacyKey);
+    return legacyValue != null && legacyValue.isNotEmpty;
   }
 
   Future<String> _computeHash(String data) async {
