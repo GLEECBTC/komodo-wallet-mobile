@@ -46,23 +46,7 @@ class _WalletListScreenState extends State<WalletListScreen> {
   }
 
   Future<void> _selectWallet(Wallet wallet) async {
-    // Check if wallet has exportable seed
-    final canExport = await _walletService.canExportSeed(wallet);
-    if (!canExport) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text(
-              'This wallet does not have an exportable seed phrase',
-            ),
-            backgroundColor: Colors.orange,
-          ),
-        );
-      }
-      return;
-    }
-
-    // Navigate to export screen
+    // Always navigate to the export screen; it will surface available methods
     if (mounted) {
       Navigator.of(context).push(
         MaterialPageRoute(

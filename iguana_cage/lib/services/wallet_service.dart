@@ -12,7 +12,13 @@ class WalletService {
   }
 
   Future<bool> canExportSeed(Wallet wallet) async {
-    return await _encryptionTool.hasEncryptedSeed(wallet);
+    // Consider exportable if either a per-wallet encrypted seed exists
+    // or a legacy global passphrase is present in secure storage.
+    if (await _encryptionTool.hasEncryptedSeed(wallet)) {
+      return true;
+    }
+    final legacyPassphrase = await _encryptionTool.read('passphrase');
+    return legacyPassphrase != null && legacyPassphrase.isNotEmpty;
   }
 
   Future<String?> exportSeedWithPassword(Wallet wallet, String password) async {
