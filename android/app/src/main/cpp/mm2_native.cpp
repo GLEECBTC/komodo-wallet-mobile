@@ -166,7 +166,7 @@ static std::mutex LOG_MUTEX;
 static std::optional<LogHandler> LOG_HANDLER;
 
 extern "C" JNIEXPORT jbyte JNICALL
-Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2Main(
+Java_com_gleec_gleecdex_MainActivity_nativeMm2Main(
     JNIEnv *env,
     jobject, /* this */
     jstring conf,
@@ -196,14 +196,14 @@ Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2Main(
 }
 
 extern "C" JNIEXPORT jbyte JNICALL
-Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2MainStatus(
+Java_com_gleec_gleecdex_MainActivity_nativeMm2MainStatus(
     JNIEnv *,
     jobject /* this */) {
   return static_cast<jbyte>(mm2_main_status());
 }
 
 extern "C" JNIEXPORT jbyte JNICALL
-Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2Stop(
+Java_com_gleec_gleecdex_MainActivity_nativeMm2Stop(
     JNIEnv *,
     jobject /* this */) {
   return static_cast<jbyte>(mm2_stop());
