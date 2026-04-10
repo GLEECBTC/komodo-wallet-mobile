@@ -30,73 +30,78 @@ class _HelpPageState extends State<HelpPage> {
         ),
         'isExpanded': false,
       },
-      {
-        'q': local.question_2(appConfig.appName),
-        'a': Text(
-          local.answer_2(appConfig.appName),
-          style: const TextStyle(
-            height: 1.3,
-            fontSize: 15,
+      if (!appConfig.kIsWalletOnly)
+        {
+          'q': local.question_2(appConfig.appName),
+          'a': Text(
+            local.answer_2(appConfig.appName),
+            style: const TextStyle(
+              height: 1.3,
+              fontSize: 15,
+            ),
           ),
-        ),
-        'isExpanded': false,
-      },
-      {
-        'q': local.question_3,
-        'a': HtmlParser(
-          local.answer_3(appConfig.appName),
-          textStyle: Theme.of(context).textTheme.subtitle1.copyWith(
-                fontWeight: FontWeight.w400,
-                height: 1.3,
-                fontSize: 15,
-              ),
-          linkStyle: Theme.of(context).textTheme.subtitle1.copyWith(
-                fontWeight: FontWeight.w400,
-                height: 1.3,
-                fontSize: 15,
-                color: Color.fromRGBO(57, 161, 238, 1),
-              ),
-        ),
-        'isExpanded': false,
-      },
-      {
-        'q': local.question_4,
-        'a': Text(
-          local.answer_4,
-          style: const TextStyle(
-            height: 1.3,
-            fontSize: 15,
+          'isExpanded': false,
+        },
+      if (!appConfig.kIsWalletOnly)
+        {
+          'q': local.question_3,
+          'a': HtmlParser(
+            local.answer_3(appConfig.appName),
+            textStyle: Theme.of(context).textTheme.subtitle1.copyWith(
+                  fontWeight: FontWeight.w400,
+                  height: 1.3,
+                  fontSize: 15,
+                ),
+            linkStyle: Theme.of(context).textTheme.subtitle1.copyWith(
+                  fontWeight: FontWeight.w400,
+                  height: 1.3,
+                  fontSize: 15,
+                  color: Color.fromRGBO(57, 161, 238, 1),
+                ),
           ),
-        ),
-        'isExpanded': false,
-      },
-      {
-        'q': local.question_5(appConfig.appName),
-        'a': Text(
-          local.answer_5(appConfig.appName),
-          style: const TextStyle(
-            height: 1.3,
-            fontSize: 15,
+          'isExpanded': false,
+        },
+      if (!appConfig.kIsWalletOnly)
+        {
+          'q': local.question_4,
+          'a': Text(
+            local.answer_4,
+            style: const TextStyle(
+              height: 1.3,
+              fontSize: 15,
+            ),
           ),
-        ),
-        'isExpanded': false,
-      },
+          'isExpanded': false,
+        },
+      if (!appConfig.kIsWalletOnly)
+        {
+          'q': local.question_5(appConfig.appName),
+          'a': Text(
+            local.answer_5(appConfig.appName),
+            style: const TextStyle(
+              height: 1.3,
+              fontSize: 15,
+            ),
+          ),
+          'isExpanded': false,
+        },
       <String, dynamic>{
         'q': local.question_6,
         'a': _getSupportAnswer(),
         'isExpanded': false,
       },
-      {
-        'q': local.question_7,
-        'a': Text(
-          local.answer_7(appConfig.appName),
-          style: const TextStyle(
-            height: 1.3,
-            fontSize: 15,
-          ),
-        ),
-        'isExpanded': false,
-      },
+      // TODO: update contents when KYC framework is ready
+      // {
+      //   'q': local.question_7,
+      //   'a': Text(
+      //     local.answer_7(appConfig.appName),
+      //     style: const TextStyle(
+      //       height: 1.3,
+      //       fontSize: 15,
+      //     ),
+      //   ),
+      //   'isExpanded': false,
+      // },
       {
         'q': local.question_8(appConfig.appName),
         'a': Text(

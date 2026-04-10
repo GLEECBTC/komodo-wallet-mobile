@@ -89,8 +89,10 @@ class Ask {
     this.price,
     this.priceFract,
     this.maxvolume,
+    this.maxRelVolume,
     this.maxvolumeFract,
     this.minVolume,
+    this.minRelVolume,
     this.pubkey,
     this.age,
     this.zcredits,
@@ -107,21 +109,41 @@ class Ask {
       priceFract: json['price']['fraction'],
       maxvolume: deci(json['base_max_volume']['decimal']),
       maxvolumeFract: json['base_max_volume']['fraction'],
+      maxRelVolume: deci(json['rel_max_volume']['decimal']),
       minVolume: fract2rat(json['base_min_volume']['fraction']) ??
           Rational.parse(json['base_min_volume']['decimal']),
+      minRelVolume: fract2rat(json['rel_min_volume']['fraction']) ??
+          Rational.parse(json['rel_min_volume']['decimal']),
       pubkey: json['pubkey'] ?? '',
       age: json['age'] ?? 0,
       zcredits: json['zcredits'] ?? 0,
     );
   }
 
+  /// The coin being bought (rel coin in the request).
   String coin;
   String address;
+
+  /// The price of 1 rel coin (coin being bought) in terms of the base coin
+  /// (coin being sold). E.g. If asking for WBTC, the price is the amount of
+  /// KMD needed to buy 1 WBTC.
   String price;
   Map<String, dynamic> priceFract;
+
+  /// The maximum amount of the base coin that can be sold
   Map<String, dynamic> maxvolumeFract;
+
+  /// The maximum amount of the base coin that can be sold
   Decimal maxvolume;
+
+  /// The maximum amount of [coin] that can be bought
+  Decimal maxRelVolume;
+
+  /// The minimum amount of the base coin that can be sold
   Rational minVolume;
+
+  /// The minimum amount of [coin] that can be bought
+  Rational minRelVolume;
   String pubkey;
   int age;
   int zcredits;
@@ -140,8 +162,12 @@ class Ask {
           'decimal': maxvolume.toString(),
           'fraction': maxvolumeFract,
         },
+        'rel_max_volume': {'decimal': maxRelVolume.toString()},
         'base_min_volume': {
           'fraction': rat2fract(minVolume),
+        },
+        'rel_min_volume': {
+          'fraction': rat2fract(minRelVolume),
         },
         'pubkey': pubkey ?? '',
         'age': age ?? 0,
@@ -150,8 +176,18 @@ class Ask {
 
   Rational getReceiveAmount(Rational amountToSell) {
     Rational buyAmount = amountToSell / fract2rat(priceFract);
-    if (buyAmount >= fract2rat(maxvolumeFract))
-      buyAmount = fract2rat(maxvolumeFract);
+    final Rational buyBaseAmount = buyAmount * fract2rat(priceFract);
+
+    final Rational maxVolumeBase = fract2rat(maxvolumeFract);
+    final Rational maxVolumeRel =
+        fract2rat(maxvolumeFract) / fract2rat(priceFract);
+
+    final bool askRelGreaterThanMaxRelVolume = buyAmount >= maxVolumeRel;
+    final bool askBaseGreaterThanMaxBaseVolume = buyBaseAmount >= maxVolumeBase;
+
+    if (askRelGreaterThanMaxRelVolume || askBaseGreaterThanMaxBaseVolume) {
+      buyAmount = maxVolumeRel;
+    }
     return buyAmount;
   }
 

@@ -269,7 +269,14 @@ class SyncOrderbook {
     });
 
     list.sort((a, b) => a.pair.rel.compareTo(b.pair.rel));
-    return list;
+
+    return list.where((OrderbookDepth item) {
+      final bool sameAsOrderbookTicker = item.pair.base == coin.orderbookTicker;
+      final bool sameAsSegwitPair =
+          isCoinPairSegwitPair(item.pair.base, item.pair.rel);
+
+      return !sameAsOrderbookTicker && !sameAsSegwitPair;
+    }).toList();
   }
 
   Future<void> _updateOrderBooks() async {
@@ -445,6 +452,10 @@ class SyncOrderbook {
 
     List<Future> futures = pairs.map((pair) async {
       final List<String> abbr = pair.split('/');
+      if (isCoinPairSegwitPair(abbr[0], abbr[1])) {
+        return;
+      }
+
       final dynamic orderbook = await MM.getOrderbook(
           mmSe.client,
           GetOrderbook(
@@ -455,8 +466,10 @@ class SyncOrderbook {
       if (orderbook is Orderbook) {
         orderbooks[pair] = orderbook;
       } else if (orderbook is ErrorString) {
-        Log('order_book_provider] _updateOrderBooksAsync',
-            '$pair: ${orderbook.error}');
+        Log(
+          'order_book_provider] _updateOrderBooksAsync',
+          '$pair: ${orderbook.error}',
+        );
       }
     }).toList();
 
@@ -517,4 +530,20 @@ class SyncOrderbook {
 
     // await syncOrderbook._saveOrderbookSnapshot();
   }
+}
+
+/// Returns true if [base] and [rel] are a segwit pair.
+/// Example: isCoinPairSegwitPair('BTC-segwit', 'BTC') == true
+bool isCoinPairSegwitPair(String base, String rel) {
+  final bool isBaseSegwit = base.toLowerCase().contains('segwit');
+  if (isBaseSegwit) {
+    return base.replaceAll('segwit', '').replaceAll('-', '').contains(rel);
+  }
+
+  final bool isRelSegwit = rel.toLowerCase().contains('segwit');
+  if (isRelSegwit) {
+    return rel.replaceAll('segwit', '').replaceAll('-', '').contains(base);
+  }
+
+  return false;
 }

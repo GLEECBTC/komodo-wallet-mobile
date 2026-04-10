@@ -277,13 +277,10 @@ class AppLocalizations {
           '</a>. The team and the community are always happy to help!',
           name: 'answer_6',
           args: <Object>[name, link, appName, appCompanyShort]);
-  String get question_7 =>
-      Intl.message('Do you have country restrictions?', name: 'question_7');
-  String answer_7(String appName) => Intl.message(
-      'No! $appName is fully decentralized.'
-      ' It is not possible to limit user access by any third party.',
-      name: 'answer_7',
-      args: [appName]);
+  // TODO: update contents when KYC framework is public
+  // String get question_7 =>
+  //     Intl.message('Do you have country restrictions?', name: 'question_7');
+  // String answer_7(String appName) => Intl.message();
   String question_8(String appName) => Intl.message('Who is behind $appName?',
       name: 'question_8', args: [appName]);
   String answer_8(String appName, String appCompanyShort) => Intl.message(

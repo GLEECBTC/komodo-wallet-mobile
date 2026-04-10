@@ -40,11 +40,14 @@ class CoinUpdater {
 
   static const isUpdateEnabled = true;
 
-  final String localAssetPathConfig = 'assets/coins_config.json';
+  final String localAssetPathConfig = 'assets/coins_config_tcp.json';
   final String localAssetPathCoins = 'assets/coins.json';
 
+  // coins_config_tcp.json prefers SSL where available, but falls back to TCP
+  // when SSL is not available.
+  //Monitor post-release and revert in case expired certs area a common issue.
   String get remotePathConfig =>
-      '$coinsRepoUrl/$coinsRepoBranch/utils/coins_config.json';
+      '$coinsRepoUrl/$coinsRepoBranch/utils/coins_config_tcp.json';
   String get remotePathCoins => '$coinsRepoUrl/$coinsRepoBranch/coins';
 
   String _cachedConfig;

@@ -117,6 +117,7 @@ class Coin {
     explorerTxUrl = config['explorer_tx_url'] ?? '';
     explorerAddressUrl = config['explorer_address_url'] ?? '';
     decimals = init['decimals'];
+    orderbookTicker = config['orderbook_ticker'];
   }
 
   // Coin suspended if was activated by user earlier,
@@ -166,6 +167,7 @@ class Coin {
   String explorerTxUrl;
   String explorerAddressUrl;
   int decimals;
+  String orderbookTicker;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
         'type': type.name ?? '',
@@ -195,6 +197,7 @@ class Coin {
         if (lightWalletDServers != null)
           'light_wallet_d_servers':
               List<dynamic>.from(lightWalletDServers.map<String>((x) => x)),
+        if (orderbookTicker != null) 'orderbook_ticker': orderbookTicker
       };
 
   String getTxFeeSatoshi() {

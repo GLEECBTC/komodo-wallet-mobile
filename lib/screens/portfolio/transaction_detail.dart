@@ -115,11 +115,14 @@ class _TransactionDetailState extends State<TransactionDetail> {
                               amountString =
                                   (amount < deci(0) ? '-' : '') + '**.**';
                             }
-                            return AutoSizeText(
-                              '$amountString ${tx.coin}',
-                              style: Theme.of(context).textTheme.headline5,
-                              maxLines: 1,
-                              textAlign: TextAlign.center,
+                            return InkWell(
+                              onTap: () => copyToClipBoard(context, amountString),
+                              child: AutoSizeText(
+                                '$amountString ${tx.coin}',
+                                style: Theme.of(context).textTheme.headline5,
+                                maxLines: 1,
+                                textAlign: TextAlign.center,
+                              ),
                             );
                           }),
                     ),
@@ -279,6 +282,7 @@ class _TransactionDetailState extends State<TransactionDetail> {
     return '$fee $feeCoin';
   }
 }
+
 
 class ItemTransationDetail extends StatelessWidget {
   const ItemTransationDetail({this.title, this.data});

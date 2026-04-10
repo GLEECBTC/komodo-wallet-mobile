@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:komodo_dex/app_config/app_config.dart';
+import 'package:provider/provider.dart';
+
 import '../../localizations.dart';
 import '../../model/coin.dart';
 import '../../model/order_book_provider.dart';
+import '../../utils/custom_tab_indicator.dart';
 import '../markets/coins_price_list.dart';
 import '../markets/order_book_page.dart';
-import '../../utils/custom_tab_indicator.dart';
-import 'package:provider/provider.dart';
 
 class MarketsPage extends StatefulWidget {
   @override
@@ -21,7 +23,8 @@ class _MarketsPageState extends State<MarketsPage>
   void initState() {
     super.initState();
 
-    tabController = TabController(length: 2, vsync: this);
+    final tabControllerLength = appConfig.kIsWalletOnly ? 1 : 2;
+    tabController = TabController(length: tabControllerLength, vsync: this);
   }
 
   @override
@@ -53,9 +56,10 @@ class _MarketsPageState extends State<MarketsPage>
               Tab(
                 text: AppLocalizations.of(context).marketsPrice,
               ),
-              Tab(
-                text: AppLocalizations.of(context).marketsOrderbook,
-              )
+              if (!appConfig.kIsWalletOnly)
+                Tab(
+                  text: AppLocalizations.of(context).marketsOrderbook,
+                )
             ],
           ),
         ),
@@ -104,7 +108,7 @@ class _MarketsPageState extends State<MarketsPage>
               _orderBookProvider.activePair = CoinsPair(sell: coin, buy: null);
               tabController.index = 1;
             }),
-            const OrderBookPage(),
+            if (!appConfig.kIsWalletOnly) const OrderBookPage(),
           ],
         );
       }),

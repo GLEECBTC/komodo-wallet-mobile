@@ -18,6 +18,7 @@ import '../../../../utils/log.dart';
 import '../../utils/utils.dart';
 import 'coin_detail/coin_detail.dart';
 import 'copy_dialog.dart';
+import '../../app_config/app_config.dart';
 
 class ItemCoin extends StatefulWidget {
   const ItemCoin({
@@ -86,7 +87,11 @@ class _ItemCoinState extends State<ItemCoin>
         },
       ),
     );
-    if (!coin.walletOnly && double.parse(balance.getBalance()) > 0) {
+    final showSwapAction = !coin.walletOnly &&
+        // Hide swap action for wallet only mode (i.e. trading disabled mode)
+        !appConfig.kIsWalletOnly &&
+        double.parse(balance.getBalance()) > 0;
+    if (showSwapAction) {
       actions.add(
         SlidableAction(
           label: AppLocalizations.of(context).swap.toUpperCase(),

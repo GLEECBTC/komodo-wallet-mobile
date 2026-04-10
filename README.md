@@ -1,4 +1,6 @@
 # Gleec Wallet - Open Source GitHub Repository 🚀
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/KomodoPlatform/komodo-wallet-mobile?quickstart=1)
+
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/komodoplatform/atomicdex-mobile/build.yml)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/komodoplatform/atomicdex-mobile)
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/komodoplatform/atomicdex-mobile)
@@ -66,6 +68,27 @@ Windows: `choco install jq`, [Choco software](https://chocolatey.org/)
 
 https://github.com/KomodoPlatform/AtomicDEX-mobile/wiki/Project-Setup#build-and-run
 
+### Build with docker
+
+To build from a container without installing Flutter on an x86_64 machine (Linux or Windows) with Docker or Podman installed, you can use the provided Dockerfile.
+
+```bash
+sh .docker/build_apk_release.sh
+```
+
+You can also manually build using docker with the following commands:
+
+```bash
+docker build -f .docker/android-sdk.dockerfile . -t komodo/android-sdk:34
+docker build -f .docker/android-apk-build.dockerfile . -t komodo/komodo-wallet-mobile
+docker run --rm -v ./build:/app/build komodo/komodo-wallet-mobile:latest
+```
+
+The build output should be in the following directory: `build/app/outputs/flutter-apk/app-release.apk`
+
+NOTE: There are known issues with building this repository using docker on ARM-based systems (e.g. M-series Macs, Raspberry Pi):
+ - linux/amd64: [Dart VM emulation on M1 Mac fails](https://github.com/dart-lang/sdk/issues/48420)
+ - linux/arm64: fails due to dependencies limiting the versions of the dart sdk, android gradle plugin, and gradle build tools. See the [Gradle Compatibility Matrix](https://docs.gradle.org/current/userguide/compatibility.html)
 
 ## Run/Build with screenshot and video recording ON
 
@@ -93,6 +116,17 @@ Ensure you run the most recent Gleec DeFi Framework [stable release](https://git
 **Relative to the Flutter project's root folder. E.g. if your name was Bob and you cloned the flutter project into your macOS home directory, the full path for the iOS API would be `/Users/Bob/atomicdex_mobile/ios/libmm2.a`*
 
 See [our wiki](https://github.com/KomodoPlatform/atomicdex-mobile/wiki/Project-Setup#android-builds-from-scratch) here for more thorough project setup steps. Besides installing the API binary, Gleec Wallet is set up similarly to any other cloned Flutter project.
+
+### Setup with Python script
+
+You can use the provided Python script to download and extract the API binary for you. This script will download the latest release of the API binary from GitHub and extract it to the correct location.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r .docker/requirements.txt
+python .docker/update_api.py --force
+```
 
 ## Accessing the database
 

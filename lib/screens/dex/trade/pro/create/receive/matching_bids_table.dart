@@ -1,15 +1,16 @@
-import 'package:rational/rational.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../blocs/swap_bloc.dart';
-import '../../../../../../model/order_book_provider.dart';
-import '../../../../../dex/trade/pro/create/receive/bid_details_dialog.dart';
-import '../../../../../dex/trade/pro/create/receive/not_enough_volume_dialog.dart';
 import 'package:provider/provider.dart';
+import 'package:rational/rational.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../../../../blocs/swap_bloc.dart';
 import '../../../../../../localizations.dart';
 import '../../../../../../model/addressbook_provider.dart';
+import '../../../../../../model/order_book_provider.dart';
 import '../../../../../../model/orderbook.dart';
 import '../../../../../../utils/utils.dart';
+import '../../../../../dex/trade/pro/create/receive/bid_details_dialog.dart';
+import '../../../../../dex/trade/pro/create/receive/not_enough_volume_dialog.dart';
 
 class MatchingBidsTable extends StatefulWidget {
   const MatchingBidsTable({
@@ -120,6 +121,10 @@ class _MatchingBidsTableState extends State<MatchingBidsTable> {
   }
 
   TableRow _tableRow(Ask bid, int index) {
+    /// Convert the USD equivalent of the bid volume to the receive coin amount
+    final double _bidVolume = bid.maxvolume.toDouble();
+    final double convertedVolume = _bidVolume / bid.priceRat.toDouble();
+
     return TableRow(
       children: [
         TableRowInkWell(
@@ -192,7 +197,7 @@ class _MatchingBidsTableState extends State<MatchingBidsTable> {
                   color: Theme.of(context).highlightColor,
                 ))),
             child: Text(
-              formatPrice(bid.maxvolume.toDouble()),
+              formatPrice(convertedVolume),
               style:
                   Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 13),
             ),
@@ -215,7 +220,7 @@ class _MatchingBidsTableState extends State<MatchingBidsTable> {
                   color: Theme.of(context).highlightColor,
                 ))),
             child: Text(
-              formatPrice(bid.maxvolume.toDouble() * double.parse(bid.price)),
+              formatPrice(convertedVolume * double.parse(bid.price)),
               style:
                   Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 13),
             ),
@@ -281,7 +286,7 @@ class _MatchingBidsTableState extends State<MatchingBidsTable> {
     final Rational maxSellAmt = swapBloc.maxTakerVolume ??
         Rational.parse(swapBloc.sellCoinBalance.balance.balance.toString());
     final bool isEnoughVolume =
-        !(bid.minVolume != null && maxSellAmt < (bid.minVolume * bid.priceRat));
+        !(bid.minVolume != null && maxSellAmt < bid.minVolume);
 
     if (isEnoughVolume) {
       Navigator.of(context).pop();

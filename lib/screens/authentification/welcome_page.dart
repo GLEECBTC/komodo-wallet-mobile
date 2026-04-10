@@ -36,17 +36,25 @@ class _WelcomePageState extends State<WelcomePage> {
           SvgPicture.asset(Theme.of(context).brightness == Brightness.light
               ? 'assets/svg_light/welcome_wallet.svg'
               : 'assets/svg/welcome_wallet.svg'),
+          SizedBox(height: 4),
           Text(
             AppLocalizations.of(context).welcomeTitle,
             key: const Key('titleCreateWallet'),
             style: Theme.of(context).textTheme.headline5,
             textAlign: TextAlign.center,
           ),
+          SizedBox(height: 4),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(AppLocalizations.of(context).to + ' ',
+                  style: Theme.of(context).textTheme.subtitle1),
+            ],
+          ),
+          SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(AppLocalizations.of(context).to + ' ',
-                  style: Theme.of(context).textTheme.subtitle1),
               Text(
                 toInitialUpper(appConfig.appName) + ' ',
                 style: Theme.of(context)

@@ -37,7 +37,9 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
     if (text.isEmpty ||
         text2.isEmpty ||
         !_formKey.currentState.validate() ||
-        controller1.text != controller2.text) {
+        controller1.text != controller2.text ||
+        controller1.text.length < 12 ||
+        controller2.text.length < 12) {
       setState(() {
         isValidPassword = false;
       });
@@ -49,12 +51,16 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
   }
 
   bool _validateInputs() {
+    // Only validate if the user has entered atleast 3 characters.
+    if (controller1.text.length < 3) {
+      return false;
+    }
     if (_formKey.currentState.validate()) {
-//    If all data are correct then save data to out variables
+      // If all data are correct then save data to out variables
       _formKey.currentState.save();
       return true;
     } else {
-//    If all data are not valid then start auto validation.
+      // If all data are not valid then start auto validation.
       setState(() {
         _autoValidate = true;
       });
@@ -88,6 +94,9 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
               controller: controller1,
               onFieldSubmitted: (String term) {
                 _fieldFocusChange(context, _focus1, _focus2);
+                _validateInputs();
+              },
+              onChanged: (value) {
                 _validateInputs();
               },
               textInputAction: TextInputAction.next,

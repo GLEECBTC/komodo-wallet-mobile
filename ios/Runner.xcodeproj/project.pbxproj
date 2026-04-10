@@ -297,7 +297,7 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/package_info_plus/package_info_plus.framework",
 				"${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework",
-				"${BUILT_PRODUCTS_DIR}/share/share.framework",
+				"${BUILT_PRODUCTS_DIR}/share_plus/share_plus.framework",
 				"${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/sqflite/sqflite.framework",
 				"${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework",
@@ -328,7 +328,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/package_info_plus.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/path_provider_ios.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/share.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/share_plus.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/shared_preferences_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqflite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/url_launcher_ios.framework",
@@ -472,7 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = 3AU3KU35KZ;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -621,7 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = 3AU3KU35KZ;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -659,7 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = 3AU3KU35KZ;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",

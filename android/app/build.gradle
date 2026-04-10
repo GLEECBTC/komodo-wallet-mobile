@@ -38,7 +38,7 @@ android {
     defaultConfig {
         applicationId "com.gleec.gleecdex"
         minSdkVersion 28
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         buildConfigField "Long", "BUILD_TIME", "" + System.currentTimeMillis() + "L"

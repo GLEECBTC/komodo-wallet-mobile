@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:komodo_dex/blocs/coins_bloc.dart';
+import 'package:komodo_dex/packages/binance_candlestick_charts/bloc/binance_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../app_config/app_config.dart';
@@ -87,48 +88,28 @@ class CexProvider extends ChangeNotifier {
     cexPrices.unlinkProvider(this);
   }
 
-  final String _chartsUrl = appConfig.candlestickData;
-  final Uri _tickersListUrl = Uri.parse(appConfig.candlestickTickersList);
-  final Map<String, ChartData> _charts = {}; // {'BTC-USD': ChartData(),}
+  final Map<String, ChartData> _charts = {};
   bool _updatingChart = false;
   List<String> _tickers;
+  final BinanceRepository _binanceRepository = BinanceRepository();
 
   void _updateRates() => cexPrices.updateRates();
 
   List<String> _getTickers() {
-    if (_tickers != null) return _tickers;
+    if (_tickers != null) {
+      return _tickers;
+    }
 
     _updateTickersList();
     return _tickersFallBack;
   }
 
   Future<void> _updateTickersList() async {
-    http.Response _res;
-    String _body;
     try {
-      _res = await http.get(_tickersListUrl).timeout(
-        const Duration(seconds: 60),
-        onTimeout: () {
-          Log('cex_provider', 'Fetching tickers timed out');
-          return;
-        },
-      );
-      _body = _res.body;
+      _tickers = await _binanceRepository.getLegacyTickers();
+      notifyListeners();
     } catch (e) {
       Log('cex_provider', 'Failed to fetch tickers list: $e');
-    }
-
-    List<dynamic> json;
-    try {
-      json = jsonDecode(_body);
-    } catch (e) {
-      Log('cex_provider', 'Failed to parse tickers json: $e');
-    }
-
-    if (json != null) {
-      _tickers =
-          json.map<String>((dynamic ticker) => ticker.toString()).toList();
-      notifyListeners();
     }
   }
 
@@ -136,7 +117,9 @@ class CexProvider extends ChangeNotifier {
     if (_updatingChart) return;
 
     final List<ChainLink> chain = _findChain(pair);
-    if (chain == null) throw 'No chart data available';
+    if (chain == null) {
+      throw 'No chart data available';
+    }
 
     Map<String, dynamic> json0;
     Map<String, dynamic> json1;
@@ -178,7 +161,7 @@ class CexProvider extends ChangeNotifier {
     json0.forEach((String duration, dynamic list) {
       final List<CandleData> _durationData = [];
 
-      for (var candle in list) {
+      for (final Map<String, dynamic> candle in list) {
         double open = chain[0].reverse
             ? 1 / candle['open'].toDouble()
             : candle['open'].toDouble();
@@ -248,7 +231,6 @@ class CexProvider extends ChangeNotifier {
       }
 
       data[duration] = _durationData;
-      notifyListeners();
     });
 
     _charts[pair] = ChartData(
@@ -258,58 +240,43 @@ class CexProvider extends ChangeNotifier {
       status: ChartStatus.success,
       updated: DateTime.now().millisecondsSinceEpoch,
     );
-
-    notifyListeners();
   }
 
   Future<Map<String, dynamic>> _fetchChartData(ChainLink link) async {
-    final String pair = '${link.rel}-${link.base}';
-    http.Response _res;
-    String _body;
     try {
-      _res = await http
-          .get(Uri.parse('$_chartsUrl/${pair.toLowerCase()}'))
-          .timeout(
-        const Duration(seconds: 60),
-        onTimeout: () {
-          Log('cex_provider', 'Fetching $pair data timed out');
-          throw 'Fetching $pair timed out';
-        },
-      );
-      _body = _res.body;
+      final String pair = '${link.rel}-${link.base}';
+      final Map<String, dynamic> result =
+          await _binanceRepository.getLegacyOhlcCandleData(pair);
+      return result;
     } catch (e) {
       Log('cex_provider', 'Failed to fetch data: $e');
       rethrow;
     }
-
-    Map<String, dynamic> json;
-    try {
-      json = jsonDecode(_body);
-    } catch (e) {
-      Log('cex_provider', 'Failed to parse json: $e');
-      rethrow;
-    }
-
-    return json;
   }
 
   List<ChainLink> _findChain(String pair) {
+    // remove cex postfixes
+    pair = getCoinTickerRegex(pair);
+
     final List<String> abbr = pair.split('-');
-    if (abbr[0] == abbr[1]) return null;
+    if (abbr[0] == abbr[1]) {
+      return null;
+    }
     final String base = abbr[1].toLowerCase();
     final String rel = abbr[0].toLowerCase();
     final List<String> tickers = _getTickers();
     List<ChainLink> chain;
 
-    if (tickers == null) return null;
+    if (tickers == null) {
+      return null;
+    }
 
     // try to find simple chain, direct or reverse
-    for (String ticker in tickers) {
+    for (final String ticker in tickers) {
       final List<String> availableAbbr = ticker.split('-');
       if (!(availableAbbr.contains(rel) && availableAbbr.contains(base))) {
         continue;
       }
-
       chain = [
         ChainLink(
           rel: availableAbbr[0],
@@ -317,20 +284,25 @@ class CexProvider extends ChangeNotifier {
           reverse: availableAbbr[0] != rel,
         )
       ];
+      break;
     }
 
-    if (chain != null) return chain;
+    if (chain != null) {
+      return chain;
+    }
 
     tickers.sort((String a, String b) {
-      if (a.toLowerCase().contains('btc') && !b.toLowerCase().contains('btc'))
+      if (a.toLowerCase().contains('btc') && !b.toLowerCase().contains('btc')) {
         return -1;
-      if (b.toLowerCase().contains('btc') && !a.toLowerCase().contains('btc'))
+      }
+      if (b.toLowerCase().contains('btc') && !a.toLowerCase().contains('btc')) {
         return 1;
+      }
       return 0;
     });
 
     OUTER:
-    for (String firstLinkStr in tickers) {
+    for (final String firstLinkStr in tickers) {
       final List<String> firstLinkCoins = firstLinkStr.split('-');
       if (!firstLinkCoins.contains(rel) && !firstLinkCoins.contains(base)) {
         continue;
@@ -344,7 +316,7 @@ class CexProvider extends ChangeNotifier {
           firstLink.reverse ? firstLink.rel : firstLink.base;
       final String secondBase = firstLinkCoins.contains(rel) ? base : rel;
 
-      for (String secondLink in tickers) {
+      for (final String secondLink in tickers) {
         final List<String> secondLinkCoins = secondLink.split('-');
         if (!(secondLinkCoins.contains(secondRel) &&
             secondLinkCoins.contains(secondBase))) {
@@ -364,7 +336,9 @@ class CexProvider extends ChangeNotifier {
       }
     }
 
-    if (chain != null) return chain;
+    if (chain != null) {
+      return chain;
+    }
 
     return null;
   }
@@ -649,16 +623,18 @@ class CexPrices {
       // Some coins are presented in multiple networks,
       // like BAT-ERC20 and BAT-BEP20, but have same
       // coingeckoId and same usd price
-      final List<Coin> coins =
-          (allCoins.where((coin) => getCoinTicker(coin.abbr) == ticker) ?? [])
-              .toList();
+      final List<Coin> coins = (allCoins.where(
+                (Coin coin) => getCoinTickerRegex(coin.abbr) == ticker,
+              ) ??
+              [])
+          .toList();
 
       // check if coin volume is enough
-      double minVolume = 10000;
-      double lastPrice = double.tryParse(pricesData['last_price']) ?? 0;
-      double volume24h = double.tryParse(pricesData['volume24h']) ?? 0;
+      const double minVolume = 10000;
+      final double lastPrice = double.tryParse(pricesData['last_price']) ?? 0;
+      final double volume24h = double.tryParse(pricesData['volume24h']) ?? 0;
 
-      for (Coin coin in coins) {
+      for (final Coin coin in coins) {
         final String coinAbbr = coin.abbr;
         if (coin.type == CoinType.smartChain) {
           // enough_volume for all smartChain tokens is always true :. proceed
@@ -769,7 +745,9 @@ class CexPrices {
   }
 
   void _notifyListeners() {
-    for (CexProvider provider in _providers) provider.notify();
+    for (final CexProvider provider in _providers) {
+      provider.notify();
+    }
   }
 }
 

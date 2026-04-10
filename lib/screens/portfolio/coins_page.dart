@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -14,6 +15,7 @@ import 'package:komodo_dex/packages/z_coin_activation/widgets/z_coin_status_list
 import 'package:komodo_dex/screens/portfolio/animated_asset_proportions_graph.dart';
 import 'package:komodo_dex/widgets/animated_collapse.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../blocs/coins_bloc.dart';
 import '../../../../blocs/settings_bloc.dart';
@@ -76,6 +78,12 @@ class _CoinsPageState extends State<CoinsPage> {
         if (rebrandingNotifier.shouldShowRebrandingDialog) {
           showRebrandingDialog(context).ignore();
         }
+
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          if (kDebugMode && !await _hasAgreedNoTrading()) {
+            _showDebugModeDialog().ignore();
+          }
+        });
       }
     });
     */
@@ -264,6 +272,44 @@ class _CoinsPageState extends State<CoinsPage> {
       stops: const <double>[0.01, 1],
       colors: colors,
     );
+  }
+
+  // Method to show an alert dialog with an option to agree if the app is in
+  // debug mode stating that trading features may not be used for actual trading
+  // and that only test assets/networks may be used.
+  Future<void> _showDebugModeDialog() async {
+    await showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Debug mode'),
+          content: const Text(
+            'This app is in debug mode. Trading features may not be used for '
+            'actual trading. Only test assets/networks may be used.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                _saveAgreedState().ignore();
+              },
+              child: const Text('I agree'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> _saveAgreedState() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool('wallet_only_agreed', true);
+  }
+
+  Future<bool> _hasAgreedNoTrading() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool('wallet_only_agreed') ?? false;
   }
 }
 

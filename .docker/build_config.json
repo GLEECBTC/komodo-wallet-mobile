@@ -1,0 +1,28 @@
+{
+    "api": {
+        "release_tag": "v2.3.0-beta",
+        "use_latest_release": false,
+        "github_repository": "https://github.com/KomodoPlatform/komodo-defi-framework",
+        "platforms": {
+            "ios": {
+                "keywords": [
+                    "ios",
+                    "aarch64"
+                ],
+                "path": "ios"
+            },
+            "android-armv7": {
+                "keywords": [
+                    "android-armv7"
+                ],
+                "path": "android/app/src/main/cpp/libs/armeabi-v7a"
+            },
+            "android-aarch64": {
+                "keywords": [
+                    "android-aarch64"
+                ],
+                "path": "android/app/src/main/cpp/libs/arm64-v8a"
+            }
+        }
+    }
+}

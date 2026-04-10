@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../../blocs/dialog_bloc.dart';
 import '../../../../../../blocs/swap_bloc.dart';
 import '../../../../../../localizations.dart';
@@ -38,7 +39,7 @@ void openNotEnoughVolumeDialog(BuildContext context, Ask ask) {
                       SizedBox(width: 4),
                       Text(
                           '${ask.coin} ' +
-                              cutTrailingZeros(formatPrice(ask.minVolume)),
+                              cutTrailingZeros(formatPrice(ask.minRelVolume)),
                           style: TextStyle(
                             color: Theme.of(context).primaryColorDark,
                             fontWeight: FontWeight.w400,
@@ -64,7 +65,7 @@ void openNotEnoughVolumeDialog(BuildContext context, Ask ask) {
                 SizedBox(width: 2),
                 Text(
                     cutTrailingZeros(formatPrice(
-                        ask.minVolume.toDouble() * double.parse(ask.price))),
+                        ask.minRelVolume.toDouble() * double.parse(ask.price))),
                     style: TextStyle(
                       fontSize: 12,
                       color: Theme.of(context).disabledColor,

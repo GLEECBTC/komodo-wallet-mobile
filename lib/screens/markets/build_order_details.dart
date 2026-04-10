@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import '../../app_config/app_config.dart';
+import 'package:provider/provider.dart';
 import 'package:rational/rational.dart';
+
+import '../../app_config/app_config.dart';
+import '../../app_config/theme_data.dart';
 import '../../blocs/coins_bloc.dart';
 import '../../localizations.dart';
 import '../../model/addressbook_provider.dart';
 import '../../model/cex_provider.dart';
 import '../../model/order_book_provider.dart';
 import '../../model/orderbook.dart';
-import '../addressbook/addressbook_page.dart';
 import '../../utils/utils.dart';
 import '../../widgets/cex_data_marker.dart';
-import '../../app_config/theme_data.dart';
-import 'package:provider/provider.dart';
+import '../addressbook/addressbook_page.dart';
 
 class BuildOrderDetails extends StatefulWidget {
   const BuildOrderDetails(this.order, {this.sellAmount});
@@ -315,8 +316,9 @@ class _BuildOrderDetailsState extends State<BuildOrderDetails> {
   }
 
   Widget _buildMinVolume() {
-    if (widget.order.minVolume == null) return SizedBox();
-    if (widget.order.minVolume <= Rational.parse('0.00777')) return SizedBox();
+    if (widget.order.minRelVolume == null) return SizedBox();
+    if (widget.order.minRelVolume <= Rational.parse('0.00777'))
+      return SizedBox();
 
     return Row(
       children: <Widget>[
@@ -332,7 +334,7 @@ class _BuildOrderDetailsState extends State<BuildOrderDetails> {
               Text(
                 '${AppLocalizations.of(context).orderDetailsMin} '
                 '${widget.order.coin} '
-                '${cutTrailingZeros(formatPrice(widget.order.minVolume))}',
+                '${cutTrailingZeros(formatPrice(widget.order.minRelVolume))}',
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w400,

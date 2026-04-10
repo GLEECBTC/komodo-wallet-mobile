@@ -1,5 +1,5 @@
-import '../../../../dex/trade/pro/create/trade_form.dart';
 import 'package:rational/rational.dart';
+
 import '../../../../../blocs/coins_bloc.dart';
 import '../../../../../blocs/main_bloc.dart';
 import '../../../../../blocs/swap_bloc.dart';
@@ -8,6 +8,7 @@ import '../../../../../model/coin_balance.dart';
 import '../../../../../model/orderbook.dart';
 import '../../../../../model/trade_preimage.dart';
 import '../../../../../utils/utils.dart';
+import '../../../../dex/trade/pro/create/trade_form.dart';
 
 class TradeFormValidator {
   final CoinBalance sellBalance = swapBloc.sellCoinBalance;
@@ -57,7 +58,7 @@ class TradeFormValidator {
       return appLocalizations.minValueBuy(
           swapBloc.receiveCoinBalance.coin.abbr, '$minVolumeReceive');
     } else if (matchingBid != null && matchingBid.minVolume != null) {
-      if (amountReceive != null && amountReceive < matchingBid.minVolume) {
+      if (amountReceive != null && amountReceive < matchingBid.minRelVolume) {
         return appLocalizations.minValueOrder(
           swapBloc.receiveCoinBalance.coin.abbr,
           cutTrailingZeros(formatPrice(matchingBid.minVolume)),

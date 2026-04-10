@@ -227,6 +227,9 @@ class ApiProvider {
       'userpass': mmSe.userpass,
       'coin': coin.abbr,
       'servers': Coin.getServerList(coin.serverList),
+      // limit the number of active connections to electrum servers to 1 to
+      // reduce device load & request spamming
+      'max_connected': 1,
       'mm2': coin.mm2,
       'tx_history': true,
       'required_confirmations': coin.requiredConfirmations,
