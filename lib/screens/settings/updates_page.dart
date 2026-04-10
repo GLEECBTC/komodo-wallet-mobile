@@ -125,7 +125,7 @@ class _UpdatesPageState extends State<UpdatesPage> {
                               ? launchURL(
                                   'https://testflight.apple.com/join/c2mOLEoC')
                               : launchURL(
-                                  'https://play.google.com/store/apps/details?id=com.komodoplatform.atomicdex');
+                                  'https://play.google.com/store/apps/details?id=com.gleec.gleecdex');
                         },
                         style: ElevatedButton.styleFrom(
                           primary: Theme.of(context).dialogBackgroundColor,
