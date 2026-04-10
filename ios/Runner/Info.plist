@@ -40,7 +40,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>com.gleec.gleecdex.gleec</string>
+			<string>com.GleecDEX.wallet</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>bitcoin</string>
@@ -50,7 +50,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>com.gleec.gleecdex.gleec</string>
+			<string>com.GleecDEX.wallet</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>ethereum</string>
