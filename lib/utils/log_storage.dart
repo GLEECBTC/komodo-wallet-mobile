@@ -191,7 +191,7 @@ class LogStorage {
 
       if (wouldBeOverLimit || isLastFile) {
         final archiveFile = File(
-          '${logFolderPath()}/komodo_wallet_logs_archive_${compressedFiles.length}.gz',
+          '${logFolderPath()}/gleec_wallet_logs_archive_${compressedFiles.length}.gz',
         );
 
         final archiveBytes =

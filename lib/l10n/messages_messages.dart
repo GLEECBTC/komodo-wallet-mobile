@@ -38,13 +38,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "No! ${appName} is non-custodial. We never store any sensitive data, including your private keys, seed phrases, or PIN. This data is only stored on the user’s device and never leaves it. You are in full control of your assets.";
 
   static m8(appName) =>
-      "${appName} is available for mobile on both Android and iPhone, and for desktop on <a href=\"https://komodoplatform.com/\">Windows, Mac, and Linux operating systems</a>.";
+      "${appName} is available for mobile on both Android and iPhone, and for desktop on <a href=\"https://gleec.com/\">Windows, Mac, and Linux operating systems</a>.";
 
   static m9(appName) =>
       "Other DEXs generally only allow you to trade assets that are based on a single blockchain network, use proxy tokens, and only allow placing a single order with the same funds.\n\n${appName} enables you to natively trade across two different blockchain networks without proxy tokens. You can also place multiple orders with the same funds. For example, you can sell 0.1 BTC for KMD, QTUM, or VRSC — the first order that fills automatically cancels all other orders.";
 
   static m10(appName) =>
-      "Several factors determine the processing time for each swap. The block time of the traded assets depends on each network (Bitcoin typically being the slowest) Additionally, the user can customize security preferences. For example, you can ask ${appName} to consider a KMD transaction as final after just 3 confirmations which makes the swap time shorter compared to waiting for a <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">notarization</a>.";
+      "Several factors determine the processing time for each swap. The block time of the traded assets depends on each network (Bitcoin typically being the slowest) Additionally, the user can customize security preferences. For example, you can ask ${appName} to consider a KMD transaction as final after just 3 confirmations which makes the swap time shorter compared to waiting for a <a href=\"https://gleec.com/\">notarization</a>.";
 
   static m11(appName) =>
       "There are two fee categories to consider when trading on ${appName}.\n\n1. ${appName} charges approximately 0.13% (1/777 of trading volume but not lower than 0.0001) as the trading fee for taker orders, and maker orders have zero fees.\n\n2. Both makers and takers will need to pay normal network fees to the involved blockchains when making atomic swap transactions.\n\nNetwork fees can vary greatly depending on your selected trading pair.";
@@ -59,7 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${appName} is developed by the ${appCompanyShort} team. ${appCompanyShort} is one of the most established blockchain projects working on innovative solutions like atomic swaps, Delayed Proof of Work, and an interoperable multi-chain architecture.";
 
   static m15(appName) =>
-      "Absolutely! You can read our <a href=\"https://developers.komodoplatform.com/\">developer documentation</a> for more details or contact us with your partnership inquiries. Have a specific technical question? The ${appName} developer community is always ready to help!";
+      "Absolutely! You can read our <a href=\"https://gleec.com/\">developer documentation</a> for more details or contact us with your partnership inquiries. Have a specific technical question? The ${appName} developer community is always ready to help!";
 
   static m16(coinName1, coinName2) => "based on ${coinName1}/${coinName2}";
 
@@ -390,8 +390,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your phone is in battery saving mode. Please disable this mode or do NOT put the application to the background, otherwise, the app might be killed by OS and swap failed."),
         "bestAvailableRate":
             MessageLookupByLibrary.simpleMessage("Exchange rate"),
-        "builtKomodo": MessageLookupByLibrary.simpleMessage("Built on Komodo"),
-        "builtOnKmd": MessageLookupByLibrary.simpleMessage("Built on Komodo"),
+        "builtKomodo": MessageLookupByLibrary.simpleMessage("Built on Gleec"),
+        "builtOnKmd": MessageLookupByLibrary.simpleMessage("Built on Gleec"),
         "buy": MessageLookupByLibrary.simpleMessage("Buy"),
         "buyOrderType": MessageLookupByLibrary.simpleMessage(
             "Convert to Maker if not matched"),
@@ -547,7 +547,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning": MessageLookupByLibrary.simpleMessage(
             "Only use custom fees if you know what you are doing!"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Komodo dPoW security"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Gleec dPoW security"),
         "date": MessageLookupByLibrary.simpleMessage("Date"),
         "decryptingWallet":
             MessageLookupByLibrary.simpleMessage("Decrypting wallet"),
@@ -1123,7 +1123,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please restart the app to try again, or press the button below."),
         "portfolio": MessageLookupByLibrary.simpleMessage("Portfolio"),
         "poweredOnKmd":
-            MessageLookupByLibrary.simpleMessage("Powered by Komodo"),
+            MessageLookupByLibrary.simpleMessage("Powered by Gleec"),
         "price": MessageLookupByLibrary.simpleMessage("price"),
         "privateKey": MessageLookupByLibrary.simpleMessage("Private Key"),
         "privateKeys": MessageLookupByLibrary.simpleMessage("Private Keys"),
@@ -1154,7 +1154,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "It\'s a new era! We have officially rebranded from \'AtomicDEX\' to \'Komodo Wallet\'"),
+            "It\'s a new era! We have officially rebranded from \'AtomicDEX\' to \'Gleec Wallet\'"),
         "receive": MessageLookupByLibrary.simpleMessage("RECEIVE"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("Receive"),
         "recommendSeedMessage": MessageLookupByLibrary.simpleMessage(

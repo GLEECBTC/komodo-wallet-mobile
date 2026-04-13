@@ -37,13 +37,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "不${appName}是非托管应用。我们不会存储任何敏感数据，包括您的私钥、助记词或PIN。此数据仅存储在用户的设备上，不会转移。您的资产只由您掌控。";
 
   static m8(appName) =>
-      "${appName} 适用于 Android 和 iPhone 上的移动设备，以及 <a href=\"https://komodoplatform.com/\">Windows、Mac 和 Linux 操作系统</a> 上的桌面设备。";
+      "${appName} 适用于 Android 和 iPhone 上的移动设备，以及 <a href=\"https://gleec.com/\">Windows、Mac 和 Linux 操作系统</a> 上的桌面设备。";
 
   static m9(appName) =>
       "其他DEX（去中心化交易所）通常只允许您使用代理代币交易基于单个区块链网络的资产，并且只能用一个基金下一个订单。\n但用${appName}您可以在两个不同的区块链网络之间进行交易，且无需代理代币。您还可以用一个基金下多个订单。例如，您可以用KMD、QTUM或VRSC兑0.1 BTC，第一个订单成交后自动取消其他所有订单";
 
   static m10(appName) =>
-      "几个因素决定了每次交易的处理时间。交易资产的区块时间取决于各自的网络（比特币通常是最慢的）。此外，用户可以自定义安全偏好。例如，您可以要求${appName}在确认KMD交易为最终交易前确认3次，这使得交易时间短于等待公证的<a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">时间</a>.";
+      "几个因素决定了每次交易的处理时间。交易资产的区块时间取决于各自的网络（比特币通常是最慢的）。此外，用户可以自定义安全偏好。例如，您可以要求${appName}在确认KMD交易为最终交易前确认3次，这使得交易时间短于等待公证的<a href=\"https://gleec.com/\">时间</a>.";
 
   static m11(appName) =>
       "在｛appName｝上进行交易时，需要考虑两种费用。\n1.｛appName｝收取约0.13%（交易量的1/777，但不低于0.0001）作为吃单交易的交易费用，挂单交易不收费。\n2.在进行原子交换交易时，无论挂单还是吃单，都需要向相关区块链支付常规的网络费用\n网络费用具体取决于你选择的交易对，不同交易对费用可能大大不同。";
@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${appName} 由${appCompanyShort}团队开发。${appCompanyShort}是最成熟的区块链项目之一，致力于开发创新解决方案，如原子交换、延迟工作量证明和可互操作的多链架构。";
 
   static m15(appName) =>
-      "绝对地！您可以阅读我们的<a href=\"https://developers.komodoplatform.com/\">开发者文档</a>了解更多详细信息，或者联系我们咨询您的合作伙伴关系。有具体的技术问题吗？ ${appName} 开发者社区随时准备提供帮助！";
+      "绝对地！您可以阅读我们的<a href=\"https://gleec.com/\">开发者文档</a>了解更多详细信息，或者联系我们咨询您的合作伙伴关系。有具体的技术问题吗？ ${appName} 开发者社区随时准备提供帮助！";
 
   static m16(coinName1, coinName2) => "基于${coinName1}/${coinName2}";
 
@@ -485,7 +485,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning":
             MessageLookupByLibrary.simpleMessage("选择定制费用前务必明确知晓自己的行为"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Komodo dPoW安全"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Gleec dPoW安全"),
         "date": MessageLookupByLibrary.simpleMessage("日期"),
         "decryptingWallet": MessageLookupByLibrary.simpleMessage("钱包解密中"),
         "delete": MessageLookupByLibrary.simpleMessage("删除"),
@@ -966,7 +966,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "这是一个新时代！我们已正式将名称从“AtomicDEX”更改为“Komodo Wallet”"),
+            "这是一个新时代！我们已正式将名称从“AtomicDEX”更改为“Gleec Wallet”"),
         "receive": MessageLookupByLibrary.simpleMessage("接收"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("接收"),
         "recommendSeedMessage":

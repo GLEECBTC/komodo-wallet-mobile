@@ -38,13 +38,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Non ! ${appName} est non-custodial. Aucune donnée sensible n\'est sauvegardé, ni votre clé privé, ni votre passphrases, ni votre PIN. Toutes ces données sont stockées sur votre appareil et ne sont jamais transmises.";
 
   static m8(appName) =>
-      "${appName} est disponible pour mobile sur Android et iPhone, et pour ordinateur sur <a href=\"https://komodoplatform.com/\">systèmes d\'exploitation Windows, Mac et Linux</a>.";
+      "${appName} est disponible pour mobile sur Android et iPhone, et pour ordinateur sur <a href=\"https://gleec.com/\">systèmes d\'exploitation Windows, Mac et Linux</a>.";
 
   static m9(appName) =>
       "Les autres DEX ne vous permettent généralement que d\'échanger des actifs basés sur un seul réseau de blockchain, d\'utiliser des jetons proxy et de ne permettre de passer qu\'une seule commande avec les mêmes fonds.\n\n${appName} vous permet d\'échanger nativement sur deux réseaux blockchain différents sans jetons proxy. Vous pouvez également passer plusieurs commandes avec les mêmes fonds. Par exemple, vous pouvez vendre 0,1 BTC pour KMD, QTUM ou VRSC — la première commande exécutée annule automatiquement toutes les autres commandes.";
 
   static m10(appName) =>
-      "Plusieurs facteurs déterminent le temps de traitement de chaque échange. Le temps de blocage des actifs échangés dépend de chaque réseau (Bitcoin étant généralement le plus lent). De plus, l\'utilisateur peut personnaliser les préférences de sécurité. Par exemple, vous pouvez demander à ${appName} de considérer une transaction KMD comme finale après seulement 3 confirmations, ce qui raccourcit le temps d\'échange par rapport à l\'attente d\'une <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">notarisation</a>.";
+      "Plusieurs facteurs déterminent le temps de traitement de chaque échange. Le temps de blocage des actifs échangés dépend de chaque réseau (Bitcoin étant généralement le plus lent). De plus, l\'utilisateur peut personnaliser les préférences de sécurité. Par exemple, vous pouvez demander à ${appName} de considérer une transaction KMD comme finale après seulement 3 confirmations, ce qui raccourcit le temps d\'échange par rapport à l\'attente d\'une <a href=\"https://gleec.com/\">notarisation</a>.";
 
   static m11(appName) =>
       "Il existe deux catégories de frais à prendre en compte lors de la négociation sur ${appName}.\n\n1. ${appName} facture environ 0,13 % (1/777 du volume de négociation mais pas moins de 0,0001) comme frais de négociation pour les ordres preneurs, et les ordres fabricant n\'ont aucun frais.\n\n2. Les fabricants et les preneurs devront payer des frais de réseau normaux aux chaînes de blocs impliquées lors des transactions d\'échange atomique.\n\nLes frais de réseau peuvent varier considérablement en fonction de la paire de négociation que vous avez sélectionnée.";
@@ -59,7 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${appName} est développé par l\'équipe ${appCompanyShort} . ${appCompanyShort} est l\'un des projets de blockchain les plus établis travaillant sur des solutions innovantes telles que les swaps atomiques, la preuve de travail différée et une architecture multichaîne interopérable.";
 
   static m15(appName) =>
-      "Absolument! Vous pouvez lire notre <a href=\"https://developers.komodoplatform.com/\">documentation pour les développeurs</a> pour plus de détails ou nous contacter pour vos demandes de partenariat. Vous avez une question technique spécifique ? La communauté de développeurs ${appName} est toujours prête à vous aider !";
+      "Absolument! Vous pouvez lire notre <a href=\"https://gleec.com/\">documentation pour les développeurs</a> pour plus de détails ou nous contacter pour vos demandes de partenariat. Vous avez une question technique spécifique ? La communauté de développeurs ${appName} est toujours prête à vous aider !";
 
   static m16(coinName1, coinName2) => "basé sur ${coinName1}/${coinName2}";
 
@@ -315,7 +315,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Activation ${coinAbbr} échoué.\nVeuillez redémarrer l\'application et réessayer.";
 
   static m119(appName) =>
-      "Komodo Wallet est un portefeuille multi crypto-monnaies de nouvelle génération doté de la fonctionnalité DEX native de troisième génération et encore bien plus.";
+      "Gleec Wallet est un portefeuille multi crypto-monnaies de nouvelle génération doté de la fonctionnalité DEX native de troisième génération et encore bien plus.";
 
   static m120(appName) =>
       "Vous avez précédemment refusé à ${appName} l\'accès à la caméra.\nVeuillez modifier manuellement l\'autorisation de l\'appareil photo dans les paramètres de votre téléphone pour procéder à l\'analyse du code QR.";
@@ -408,8 +408,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Votre téléphone est en mode d\'économie de batterie. Veuillez désactiver ce mode ou ne PAS mettre l\'application en arrière-plan, sinon l\'application pourrait être tuée par le système d\'exploitation et l\'échange échouerait."),
         "bestAvailableRate":
             MessageLookupByLibrary.simpleMessage("Meilleur tarif disponible"),
-        "builtKomodo": MessageLookupByLibrary.simpleMessage("Conçu sur Komodo"),
-        "builtOnKmd": MessageLookupByLibrary.simpleMessage("Conçu sur Komodo"),
+        "builtKomodo": MessageLookupByLibrary.simpleMessage("Conçu sur Gleec"),
+        "builtOnKmd": MessageLookupByLibrary.simpleMessage("Conçu sur Gleec"),
         "buy": MessageLookupByLibrary.simpleMessage("Acheter"),
         "buyOrderType": MessageLookupByLibrary.simpleMessage(
             "Convertir en Maker s\'il n\'y a pas de correspondance"),
@@ -570,7 +570,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning": MessageLookupByLibrary.simpleMessage(
             "N\'utiliser les frais personnalisés que si vous savez ce que vous faite!"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Komodo sécurité dPoW"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Gleec sécurité dPoW"),
         "date": MessageLookupByLibrary.simpleMessage("Date"),
         "decryptingWallet": MessageLookupByLibrary.simpleMessage(
             "Décryptage du portefeuille..."),
@@ -1167,7 +1167,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Veuillez redémarrer l\'application pour réessayer, ou appuyer sur le bouton ci-dessous."),
         "portfolio": MessageLookupByLibrary.simpleMessage("Portfolio"),
         "poweredOnKmd":
-            MessageLookupByLibrary.simpleMessage("Propulsé par Komodo"),
+            MessageLookupByLibrary.simpleMessage("Propulsé par Gleec"),
         "price": MessageLookupByLibrary.simpleMessage("prix"),
         "privateKey": MessageLookupByLibrary.simpleMessage("Clé privée"),
         "privateKeys": MessageLookupByLibrary.simpleMessage("Clés privées"),
@@ -1198,7 +1198,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "C\'est une nouvelle ère ! Nous avons officiellement changé notre nom de \'AtomicDEX\' en \'Komodo Wallet\'"),
+            "C\'est une nouvelle ère ! Nous avons officiellement changé notre nom de \'AtomicDEX\' en \'Gleec Wallet\'"),
         "receive": MessageLookupByLibrary.simpleMessage("RECEVOIR"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("Recevoir"),
         "recommendSeedMessage": MessageLookupByLibrary.simpleMessage(

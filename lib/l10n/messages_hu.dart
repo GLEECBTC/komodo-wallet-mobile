@@ -39,13 +39,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nem! Az ${appName} nem felügyeleti joggal rendelkezik. Soha nem tárolunk semmilyen érzékeny adatot, beleértve az Ön privát kulcsait, magvas kifejezéseit vagy PIN-kódját. Ezeket az adatokat csak a felhasználó készülékén tároljuk, és soha nem hagyják el azt. Ön teljes mértékben ura az eszközeinek.";
 
   static m8(appName) =>
-      "Az ${appName} mobilra Androidon és iPhone-on, asztali számítógépen pedig <a href=\"https://komodoplatform.com/\">Windows, Mac és Linux operációs rendszeren</a> érhető el.";
+      "Az ${appName} mobilra Androidon és iPhone-on, asztali számítógépen pedig <a href=\"https://gleec.com/\">Windows, Mac és Linux operációs rendszeren</a> érhető el.";
 
   static m9(appName) =>
       "Más DEX-ek általában csak olyan eszközökkel lehet kereskedni, amelyek egyetlen blokklánc-hálózaton alapulnak, proxy tokeneket használnak, és csak egyetlen megbízás leadását teszik lehetővé ugyanazokkal az eszközökkel.\n\nAz ${appName} lehetővé teszi, hogy natívan, proxy tokenek nélkül kereskedhessen két különböző blokklánc hálózaton. Több megbízást is adhat ugyanazokkal az alapokkal. Például 0,1 BTC-t adhatsz el KMD, QTUM vagy VRSC ellenében - az első teljesített megbízás automatikusan törli az összes többi megbízást.";
 
   static m10(appName) =>
-      "Az egyes swapok feldolgozási idejét több tényező határozza meg. A kereskedett eszközök blokkolási ideje az egyes hálózatoktól függ (a Bitcoin jellemzően a leglassabb) Ezen kívül a felhasználó testre szabhatja a biztonsági beállításokat. Például kérheti az ${appName}-t, hogy egy KMD tranzakciót már 3 megerősítés után véglegesnek tekintsen, ami rövidebbé teszi a csereidőt, mintha <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">jegyesítésre</a> kellene várni.";
+      "Az egyes swapok feldolgozási idejét több tényező határozza meg. A kereskedett eszközök blokkolási ideje az egyes hálózatoktól függ (a Bitcoin jellemzően a leglassabb) Ezen kívül a felhasználó testre szabhatja a biztonsági beállításokat. Például kérheti az ${appName}-t, hogy egy KMD tranzakciót már 3 megerősítés után véglegesnek tekintsen, ami rövidebbé teszi a csereidőt, mintha <a href=\"https://gleec.com/\">jegyesítésre</a> kellene várni.";
 
   static m11(appName) =>
       "Két díjkategóriát kell figyelembe venni a ${appName}-on történő kereskedés során.\n\n 1. Az ${appName} körülbelül 0,13%-ot (a kereskedési volumen 1/777-ét, de nem kevesebb, mint 0,0001) számít fel kereskedési díjként a taker megbízásokért, a maker megbízásoknak pedig nulla a díja.\n\n 2. Mind a makereknek, mind a takeereknek normál hálózati díjakat kell fizetniük az érintett blokkláncoknak, amikor atomi swap tranzakciókat hajtanak végre.\n\n A hálózati díjak a kiválasztott kereskedési párostól függően nagymértékben eltérhetnek.";
@@ -60,7 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Az ${appName}-t az ${appCompanyShort} csapata fejleszti. Az ${appCompanyShort} az egyik legelismertebb blokkláncprojekt, amely olyan innovatív megoldásokon dolgozik, mint az atomic swap, a Delayed Proof of Work és az interoperábilis multi-chain architektúra.";
 
   static m15(appName) =>
-      "Teljesen! További részletekért olvassa el <a href=\"https://developers.komodoplatform.com/\">fejlesztői dokumentációnkat</a>, vagy forduljon hozzánk partnerségi kérdéseivel. Konkrét technikai kérdése van? A ${appName} fejlesztői közössége mindig készen áll a segítségére!";
+      "Teljesen! További részletekért olvassa el <a href=\"https://gleec.com/\">fejlesztői dokumentációnkat</a>, vagy forduljon hozzánk partnerségi kérdéseivel. Konkrét technikai kérdése van? A ${appName} fejlesztői közössége mindig készen áll a segítségére!";
 
   static m16(coinName1, coinName2) => "${coinName1}/${coinName2} alapján";
 
@@ -400,9 +400,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestAvailableRate": MessageLookupByLibrary.simpleMessage(
             "A rendelkezésrre álló legjobb ár"),
         "builtKomodo": MessageLookupByLibrary.simpleMessage(
-            "Komodo rendszerrel fejlesztve"),
+            "Gleec rendszerrel fejlesztve"),
         "builtOnKmd": MessageLookupByLibrary.simpleMessage(
-            "Komodo rendszerrel fejlesztve"),
+            "Gleec rendszerrel fejlesztve"),
         "buy": MessageLookupByLibrary.simpleMessage("Vétel"),
         "buyOrderType": MessageLookupByLibrary.simpleMessage(
             "Átalakítás vevővé, ha nem egyezik"),
@@ -567,7 +567,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning": MessageLookupByLibrary.simpleMessage(
             "Csak akkor használjon egyéni díjakat, ha tudja, mit csinál!"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Komodo dPoW biztonság"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Gleec dPoW biztonság"),
         "date": MessageLookupByLibrary.simpleMessage("Dátum"),
         "decryptingWallet":
             MessageLookupByLibrary.simpleMessage("Pénztárca dekódolása"),
@@ -1169,7 +1169,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kérjük, indítsa újra az alkalmazást, vagy nyomja meg az alábbi gombot."),
         "portfolio": MessageLookupByLibrary.simpleMessage("Portfolió"),
         "poweredOnKmd":
-            MessageLookupByLibrary.simpleMessage("Komodo által működtetett"),
+            MessageLookupByLibrary.simpleMessage("Gleec által működtetett"),
         "price": MessageLookupByLibrary.simpleMessage("ár"),
         "privateKey": MessageLookupByLibrary.simpleMessage("Privát kulcs"),
         "privateKeys": MessageLookupByLibrary.simpleMessage("Privát kulcsok"),
@@ -1200,7 +1200,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "Ez egy új korszak! Hivatalosan megváltoztattuk a nevünket „AtomicDEX”-ről „Komodo Wallet”-ra"),
+            "Ez egy új korszak! Hivatalosan megváltoztattuk a nevünket „AtomicDEX”-ről „Gleec Wallet”-ra"),
         "receive": MessageLookupByLibrary.simpleMessage("FOGAD"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("Fogad"),
         "recommendSeedMessage": MessageLookupByLibrary.simpleMessage(

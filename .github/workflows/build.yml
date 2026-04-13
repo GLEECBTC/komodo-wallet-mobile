@@ -1,4 +1,4 @@
-name: Build Komodo Wallet
+name: Build Gleec Wallet
 on:
   pull_request:
     types: [ opened, synchronize, reopened ]

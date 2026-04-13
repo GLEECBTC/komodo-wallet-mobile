@@ -28,8 +28,7 @@ class _ProtectionControlState extends State<ProtectionControl> {
   final int minConfs = 1;
   final int maxConfs = 5;
   int confs;
-  final String dPoWInfoUrl =
-      'https://komodoplatform.com/security-delayed-proof-of-work-dpow/';
+  final String dPoWInfoUrl = 'https://gleec.com/';
   final Color warningColor = Colors.red.withAlpha(200);
 
   @override

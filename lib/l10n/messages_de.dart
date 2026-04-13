@@ -38,13 +38,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nein! ${appName} hat keine Vormundschaft. Wir speichern niemals sensible Daten, einschließlich Ihrer privaten Schlüssel, Seed-Phrasen oder PINs. Diese Daten werden nur auf dem Gerät des Benutzers gespeichert und verlassen es nie. Sie haben die volle Kontrolle über Ihr Vermögen.";
 
   static m8(appName) =>
-      "${appName} ist für Mobilgeräte auf Android und iPhone sowie für Desktops auf <a href=\"https://komodoplatform.com/\">Windows-, Mac- und Linux-Betriebssystemen</a> verfügbar.";
+      "${appName} ist für Mobilgeräte auf Android und iPhone sowie für Desktops auf <a href=\"https://gleec.com/\">Windows-, Mac- und Linux-Betriebssystemen</a> verfügbar.";
 
   static m9(appName) =>
       "Bei anderen DEXs können Sie im Allgemeinen nur Assets handeln, die auf einem einzigen Blockchain-Netzwerk basieren, Proxy-Token verwenden und nur einen einzigen Auftrag mit denselben Geldmitteln aufgeben.\n\n${appName} ermöglicht Ihnen den nativen Handel über zwei verschiedene Blockchain-Netzwerke ohne Proxy-Tokens. Sie können auch mehrere Aufträge mit demselben Guthaben platzieren. Sie können zum Beispiel 0,1 BTC für KMD, QTUM oder VRSC verkaufen - der erste Auftrag, der ausgeführt wird, storniert automatisch alle anderen Aufträge.";
 
   static m10(appName) =>
-      "Mehrere Faktoren bestimmen die Bearbeitungszeit für einen Swap. Die Blockzeit der gehandelten Assets hängt vom jeweiligen Netzwerk ab (Bitcoin ist normalerweise das langsamste). Außerdem kann der Benutzer die Sicherheitseinstellungen anpassen. Zum Beispiel (können Sie ${appName} bitten, eine KMD-Transaktion nach nur 3 Bestätigungen als endgültig zu betrachten, wodurch die Swap-Zeit kürzer wird als beim Warten auf eine <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">Beglaubigung</a>";
+      "Mehrere Faktoren bestimmen die Bearbeitungszeit für einen Swap. Die Blockzeit der gehandelten Assets hängt vom jeweiligen Netzwerk ab (Bitcoin ist normalerweise das langsamste). Außerdem kann der Benutzer die Sicherheitseinstellungen anpassen. Zum Beispiel (können Sie ${appName} bitten, eine KMD-Transaktion nach nur 3 Bestätigungen als endgültig zu betrachten, wodurch die Swap-Zeit kürzer wird als beim Warten auf eine <a href=\"https://gleec.com/\">Beglaubigung</a>";
 
   static m11(appName) =>
       "Beim Handel auf ${appName} sind zwei Gebührenkategorien zu berücksichtigen.\n\n1. ${appName} berechnet ungefähr 0,13 % (1/777 des Handelsvolumens, aber nicht weniger als 0,0001) als Handelsgebühr für Taker-Aufträge, Maker-Aufträge haben keine Gebühren.\n\n2. Sowohl Maker als auch Taker müssen normale Netzwerkgebühren an die beteiligten Blockchains zahlen, wenn sie Atomic-Swap-Transaktionen durchführen.\n\nDie Netzwerkgebühren können je nach ausgewähltem Handelspaar stark variieren.";
@@ -59,7 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${appName} wird vom ${appCompanyShort}-Team entwickelt. ${appCompanyShort} ist eines der etabliertesten Blockchain-Projekte, das an innovativen Lösungen wie Atomic Swaps, Delayed Proof of Work und einer interoperablen Multi-Chain-Architektur arbeitet.";
 
   static m15(appName) =>
-      "Absolut! Weitere Informationen finden Sie in unserer <a href=\"https://developers.komodoplatform.com/\">Entwicklerdokumentation</a> oder kontaktieren Sie uns mit Ihren Partnerschaftsanfragen. Haben Sie eine spezielle technische Frage? Die ${appName}-Entwickler-Community ist immer bereit zu helfen!";
+      "Absolut! Weitere Informationen finden Sie in unserer <a href=\"https://gleec.com/\">Entwicklerdokumentation</a> oder kontaktieren Sie uns mit Ihren Partnerschaftsanfragen. Haben Sie eine spezielle technische Frage? Die ${appName}-Entwickler-Community ist immer bereit zu helfen!";
 
   static m16(coinName1, coinName2) => "basierend auf ${coinName1}/${coinName2}";
 
@@ -407,9 +407,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestAvailableRate":
             MessageLookupByLibrary.simpleMessage("Wechselkurs"),
         "builtKomodo":
-            MessageLookupByLibrary.simpleMessage("Auf Komodo aufgebaut"),
+            MessageLookupByLibrary.simpleMessage("Auf Gleec aufgebaut"),
         "builtOnKmd":
-            MessageLookupByLibrary.simpleMessage("Auf Komodo aufgebaut"),
+            MessageLookupByLibrary.simpleMessage("Auf Gleec aufgebaut"),
         "buy": MessageLookupByLibrary.simpleMessage("Kaufen"),
         "buyOrderType": MessageLookupByLibrary.simpleMessage(
             "In Maker-Auftrag umwandeln, wenn kein match stattgefunden hat"),
@@ -574,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning": MessageLookupByLibrary.simpleMessage(
             "Individuelle Gebühr nur nutzen, wenn Sie wissen was darunter zu verstehen ist!"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Komodo dPoW Sicherheit"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Gleec dPoW Sicherheit"),
         "date": MessageLookupByLibrary.simpleMessage("Datum"),
         "decryptingWallet":
             MessageLookupByLibrary.simpleMessage("Wallet entschlüsseln"),
@@ -1180,7 +1180,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Bitte starten Sie die App neu, um es erneut zu versuchen, oder drücken Sie die Schaltfläche unten."),
         "portfolio": MessageLookupByLibrary.simpleMessage("Portfolio"),
         "poweredOnKmd":
-            MessageLookupByLibrary.simpleMessage("Unterstützt von Komodo"),
+            MessageLookupByLibrary.simpleMessage("Unterstützt von Gleec"),
         "price": MessageLookupByLibrary.simpleMessage("Preis"),
         "privateKey":
             MessageLookupByLibrary.simpleMessage("Privater Schlüssel"),
@@ -1214,7 +1214,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "Es ist eine neue Ära! Wir haben unseren Namen offiziell von „AtomicDEX“ in „Komodo Wallet“ geändert."),
+            "Es ist eine neue Ära! Wir haben unseren Namen offiziell von „AtomicDEX“ in „Gleec Wallet“ geändert."),
         "receive": MessageLookupByLibrary.simpleMessage("ERHALTEN"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("Erhalten"),
         "recommendSeedMessage": MessageLookupByLibrary.simpleMessage(

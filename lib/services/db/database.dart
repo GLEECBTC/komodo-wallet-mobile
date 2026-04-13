@@ -222,7 +222,7 @@ class Db {
       'keywords': newArticle.keywords,
       'isSavedArticle': newArticle.isSavedArticle,
       'creationDate': newArticle.creationDate.toString(),
-      'author': newArticle.author ?? 'KomodoPlatform',
+      'author': newArticle.author ?? 'Gleec',
       'v': newArticle.v
     };
 

@@ -38,13 +38,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ні! ${appName} не зберігє. Ми ніколи не зберігаємо жодних конфіденційних даних, враховуючи ваші насінні ключі, початкові фрази або PIN-код. Ці дані зберігаються лише на пристрої користувача і ніколи не залишають його. Ви повністю контролюєте свої активи.";
 
   static m8(appName) =>
-      "${appName} доступний для мобільних пристроїв на Android і iPhone, а також для комп’ютерів в <a href=\"https://komodoplatform.com/\">операційних системах Windows, Mac і Linux</a>.";
+      "${appName} доступний для мобільних пристроїв на Android і iPhone, а також для комп’ютерів в <a href=\"https://gleec.com/\">операційних системах Windows, Mac і Linux</a>.";
 
   static m9(appName) =>
       "Інші DEX, як правило, дозволяють лише торгувати активами, які базуються на одній мережі блокчейну, використовують проксі-токени та дозволяють розміщувати лише одне замовлення з тими самими коштами.\n\n${appName} дає вам змогу безпосередньо торгувати між двома різними блокчейн-мережами без проксі-токенів. Ви також можете розмістити кілька замовлень з однаковими коштами. Наприклад, ви можете продати 0,1 BTC за KMD, QTUM або VRSC — перше заповнене замовлення автоматично скасовує всі інші замовлення.";
 
   static m10(appName) =>
-      "Кілька факторів визначають час обробки для кожного обміну. Час блокування торгових активів залежить від кожної мережі (біткойн зазвичай найповільніший). Крім того, користувач може налаштувати параметри безпеки. Наприклад, ви можете попросити ${appName} вважати транзакцію KMD остаточною лише після 3 підтверджень, що скорочує час обміну порівняно з очікуванням <a href=\"https://komodoplatform.com/security-delayed-proof- of-work-dpow/\">нотаріальне засвідчення</a>.";
+      "Кілька факторів визначають час обробки для кожного обміну. Час блокування торгових активів залежить від кожної мережі (біткойн зазвичай найповільніший). Крім того, користувач може налаштувати параметри безпеки. Наприклад, ви можете попросити ${appName} вважати транзакцію KMD остаточною лише після 3 підтверджень, що скорочує час обміну порівняно з очікуванням <a href=\"https://gleec.com/\">нотаріальне засвідчення</a>.";
 
   static m11(appName) =>
       "Під час торгівлі в ${appName} слід враховувати дві категорії комісій.\n\n1. ${appName} стягує приблизно 0,13% (1/777 об’єму торгів, але не менше 0,0001) як комісію за торгівлю замовленням-тейкерам, а замовлення-виконавці не мають комісії.\n\n2. Як виробники, так і приймачі повинні будуть сплачувати звичайні мережеві збори залученим блокчейнам під час здійснення транзакцій атомарного свопу.\n\nПлата мережі може значно відрізнятися залежно від вибраної торгової пари.";
@@ -59,7 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${appName} розроблено командою ${appCompanyShort}. ${appCompanyShort} — це один із найпопулярніших блокчейн-проектів, який працює над інноваційними рішеннями, такими як атомарні свопи, відкладене підтвердження роботи та взаємодіюча багатоланцюгова архітектура.";
 
   static m15(appName) =>
-      "Абсолютно! Щоб дізнатися більше, прочитайте нашу <a href=\"https://developers.komodoplatform.com/\">документацію для розробників</a> або зв’яжіться з нами із запитами про партнерство. Є конкретне технічне запитання? Спільнота розробників ${appName} завжди готова допомогти!";
+      "Абсолютно! Щоб дізнатися більше, прочитайте нашу <a href=\"https://gleec.com/\">документацію для розробників</a> або зв’яжіться з нами із запитами про партнерство. Є конкретне технічне запитання? Спільнота розробників ${appName} завжди готова допомогти!";
 
   static m16(coinName1, coinName2) => "на основі ${coinName1}/${coinName2}";
 
@@ -393,9 +393,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestAvailableRate":
             MessageLookupByLibrary.simpleMessage("Курс обміну валют"),
         "builtKomodo":
-            MessageLookupByLibrary.simpleMessage("Побудовано в Komodo"),
+            MessageLookupByLibrary.simpleMessage("Побудовано в Gleec"),
         "builtOnKmd":
-            MessageLookupByLibrary.simpleMessage("Побудовано в Komodo"),
+            MessageLookupByLibrary.simpleMessage("Побудовано в Gleec"),
         "buy": MessageLookupByLibrary.simpleMessage("Купити"),
         "buyOrderType": MessageLookupByLibrary.simpleMessage(
             "Перетворити на Адресант (Maker), якщо не збігається"),
@@ -562,7 +562,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning": MessageLookupByLibrary.simpleMessage(
             "Використовуйте довільні комісії, лише якщо знаєте, що робите!"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Безпека Komodo dPoW"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Безпека Gleec dPoW"),
         "date": MessageLookupByLibrary.simpleMessage("Дата"),
         "decryptingWallet":
             MessageLookupByLibrary.simpleMessage("Розшифровка гаманця"),
@@ -1164,7 +1164,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Перезапустіть додаток, щоб повторити спробу, або натисніть кнопку нижче."),
         "portfolio": MessageLookupByLibrary.simpleMessage("Портфоліо"),
         "poweredOnKmd":
-            MessageLookupByLibrary.simpleMessage("Powered by Komodo"),
+            MessageLookupByLibrary.simpleMessage("Powered by Gleec"),
         "price": MessageLookupByLibrary.simpleMessage("ціна"),
         "privateKey": MessageLookupByLibrary.simpleMessage("Приватний ключ"),
         "privateKeys": MessageLookupByLibrary.simpleMessage("Приватні ключі"),
@@ -1194,7 +1194,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "Це нова ера! Ми офіційно змінили назву з \"AtomicDEX\" на \"Komodo Wallet\""),
+            "Це нова ера! Ми офіційно змінили назву з \"AtomicDEX\" на \"Gleec Wallet\""),
         "receive": MessageLookupByLibrary.simpleMessage("ОТРИМАТИ"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("Отримати"),
         "recommendSeedMessage": MessageLookupByLibrary.simpleMessage(

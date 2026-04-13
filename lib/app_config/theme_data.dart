@@ -126,8 +126,8 @@ SliderThemeData get _sliderThemeDataLight => SliderThemeData(
 ColorScheme get _colorScheme => const ColorScheme(
       primary: Color.fromRGBO(42, 54, 71, 1),
       primaryVariant: Color.fromRGBO(28, 36, 48, 1),
-      secondary: Color.fromRGBO(57, 161, 238, 1),
-      secondaryVariant: Color.fromRGBO(57, 161, 238, 1),
+      secondary: Color.fromRGBO(38, 179, 255, 1),
+      secondaryVariant: Color.fromRGBO(38, 179, 255, 1),
       surface: Color.fromRGBO(42, 54, 71, 1),
       background: Color.fromRGBO(30, 42, 58, 1),
       error: Color.fromRGBO(202, 78, 61, 1),
@@ -143,8 +143,8 @@ ColorScheme get _colorScheme => const ColorScheme(
 ColorScheme get _colorSchemeLight => const ColorScheme(
       primary: Color.fromRGBO(255, 255, 255, 1),
       primaryVariant: Color.fromRGBO(183, 187, 191, 1),
-      secondary: Color.fromRGBO(60, 201, 191, 1),
-      secondaryVariant: Color.fromRGBO(60, 201, 191, 1),
+      secondary: Color.fromRGBO(38, 179, 255, 1),
+      secondaryVariant: Color.fromRGBO(38, 179, 255, 1),
       surface: Color.fromRGBO(255, 255, 255, 1),
       background: Color.fromRGBO(245, 245, 245, 1),
       error: Color.fromRGBO(202, 78, 61, 1),

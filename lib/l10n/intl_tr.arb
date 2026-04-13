@@ -37,7 +37,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "welcomeInfo": "Komodo Wallet mobil yerleşik üçüncü nesil DEX işlevselliği ve daha fazla özellikleri ile yeni nesil bir çoklu koin cüzdanıdır.",
+    "welcomeInfo": "Gleec Wallet mobil yerleşik üçüncü nesil DEX işlevselliği ve daha fazla özellikleri ile yeni nesil bir çoklu koin cüzdanıdır.",
     "@welcomeInfo": {
         "type": "text",
         "placeholders_order": [
@@ -355,7 +355,7 @@
             "appCompanyLong": {}
         }
     },
-    "updatesTitle": "Komodo Wallet güncellemeleri",
+    "updatesTitle": "Gleec Wallet güncellemeleri",
     "@updatesTitle": {
         "type": "text",
         "placeholders_order": [
@@ -467,7 +467,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_1": "Hayır ! Komodo Wallet, gözetimsiz bir cüzdandır. Özel kelimeleriniz, gizli kelimeleriniz ve PIN kodunuz dahil hiçbir hassas bilgiyi kaydetmiyoruz. Bu bilgiler sadece kullanıcının cihazında tutulmaktadır ve başka bir yere gitmez. Bu sayede koin ve tokenlerinizin tüm kontrolü sizdedir.",
+    "answer_1": "Hayır ! Gleec Wallet, gözetimsiz bir cüzdandır. Özel kelimeleriniz, gizli kelimeleriniz ve PIN kodunuz dahil hiçbir hassas bilgiyi kaydetmiyoruz. Bu bilgiler sadece kullanıcının cihazında tutulmaktadır ve başka bir yere gitmez. Bu sayede koin ve tokenlerinizin tüm kontrolü sizdedir.",
     "@answer_1": {
         "type": "text",
         "placeholders_order": [
@@ -487,7 +487,7 @@
             "appName": {}
         }
     },
-    "answer_2": "Diğer DEX cüzdanlar genellikle aynı miktar koin ile tek bir alım satım emri vermeye izin verir, ara token kullanır, en önemlisi de tek bir blokzincirin koinlerinin alım satımına olanak sağlar.\n\n{appName} ise birbirinden farklı iki blokzincir ağı arasında ara token kullanmadan doğrudan takas yapmaya imkân sağlar. {appName} 'te aynı miktar koin ile birden fazla alım satım emri verebilirsiniz. Mesela 0.1 BTC ile KMD, QTUM ve VRSC için ayrı ayrı alım emirleri verebilirsiniz ve bunlardan birinin tamamlanması halinde diğerleri kendiliğinden iptal olmuş olurlar.",
+    "answer_2": "Diğer DEX cüzdanlar genellikle aynı miktar koin ile tek bir alım satım emri vermeye izin verir, ara token kullanır, en önemlisi de tek bir blokzincirin koinlerinin alım satımına olanak sağlar.\n\n{appName} ise birbirinden farklı iki blokzincir ağı arasında ara token kullanmadan doğrudan takas yapmaya imkân sağlar. {appName} 'te aynı miktar koin ile birden fazla alım satım emri verebilirsiniz. Mesela 0.1 BTC ile GLEEC, QTUM ve VRSC için ayrı ayrı alım emirleri verebilirsiniz ve bunlardan birinin tamamlanması halinde diğerleri kendiliğinden iptal olmuş olurlar.",
     "@answer_2": {
         "type": "text",
         "placeholders_order": [
@@ -503,7 +503,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_3": "Her bir takasın tamamlanma sürecini etkileyen birkaç etken vardır. Takas edilen koinlerin bağlı olduğu blokzincirlerin blok çıkarım zamanları (Bitcoin en yavaşıdır) bunda etkilidir. Bunun yanında kullanıcılar, takas öncesinde güvenlik seçeneklerini özelleştirebilir. Mesela bir KMD takasına başlamadan evvel Komodo Wallet'da işlem için 3 onayın yeterli olduğu seçeneği işaretlediğinizde takas süresi <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">noterizasyon</a> eklenmeyeceğinden kısalacaktır.",
+    "answer_3": "Her bir takasın tamamlanma sürecini etkileyen birkaç etken vardır. Takas edilen koinlerin bağlı olduğu blokzincirlerin blok çıkarım zamanları (Bitcoin en yavaşıdır) bunda etkilidir. Bunun yanında kullanıcılar, takas öncesinde güvenlik seçeneklerini özelleştirebilir. Mesela bir GLEEC takasına başlamadan evvel Gleec Wallet'da işlem için 3 onayın yeterli olduğu seçeneği işaretlediğinizde takas süresi <a href=\"https://gleec.com/\">noterizasyon</a> eklenmeyeceğinden kısalacaktır.",
     "@answer_3": {
         "type": "text",
         "placeholders_order": [
@@ -519,7 +519,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_4": "Evet, takas boyunca uygulamanız açık ve internetinizin de (anlık kesintilerde bir sıkıntı yoktur) bağlı olması gerekmektedir. Aksi halde; eğer yapıcı emri (maker) veren siz iseniz takasın iptal olma durumu, alıcı emri (taker) veren iseniz de koinlerinizi kaybetme riski ortaya çıkar. Komodo Wallet protokolünde takası yapan her iki tarafın da işlem boyunca çevrimiçi olması ve takasın başarılı olması için gereklidir.",
+    "answer_4": "Evet, takas boyunca uygulamanız açık ve internetinizin de (anlık kesintilerde bir sıkıntı yoktur) bağlı olması gerekmektedir. Aksi halde; eğer yapıcı emri (maker) veren siz iseniz takasın iptal olma durumu, alıcı emri (taker) veren iseniz de koinlerinizi kaybetme riski ortaya çıkar. Gleec Wallet protokolünde takası yapan her iki tarafın da işlem boyunca çevrimiçi olması ve takasın başarılı olması için gereklidir.",
     "@answer_4": {
         "type": "text",
         "placeholders_order": [],
@@ -583,7 +583,7 @@
             "appName": {}
         }
     },
-    "question_8": "Komodo Wallet'ın arkasında kimler var ?",
+    "question_8": "Gleec Wallet'ın arkasında kimler var ?",
     "@question_8": {
         "type": "text",
         "placeholders_order": [
@@ -615,7 +615,7 @@
             "appName": {}
         }
     },
-    "answer_9": "Kesinlikle! Daha fazla ayrıntı için <a href=\"https://developers.komodoplatform.com/\">geliştirici belgelerimizi</a> okuyabilir veya ortaklık sorularınız için bizimle iletişime geçebilirsiniz. Belirli bir teknik sorunuz mu var? {appName} geliştirici topluluğu her zaman yardıma hazır!",
+    "answer_9": "Kesinlikle! Daha fazla ayrıntı için <a href=\"https://gleec.com/\">geliştirici belgelerimizi</a> okuyabilir veya ortaklık sorularınız için bizimle iletişime geçebilirsiniz. Belirli bir teknik sorunuz mu var? {appName} geliştirici topluluğu her zaman yardıma hazır!",
     "@answer_9": {
         "type": "text",
         "placeholders_order": [
@@ -625,7 +625,7 @@
             "appName": {}
         }
     },
-    "question_10": "Komodo Wallet'ı hangi cihazlarda kullanabilirim ?",
+    "question_10": "Gleec Wallet'ı hangi cihazlarda kullanabilirim ?",
     "@question_10": {
         "type": "text",
         "placeholders_order": [
@@ -635,7 +635,7 @@
             "appName": {}
         }
     },
-    "answer_10": "{appName}, hem Android hem de iPhone'da mobil cihazlar için ve <a href=\"https://komodoplatform.com/\">Windows, Mac ve Linux işletim sistemlerinde</a> masaüstü için kullanılabilir.",
+    "answer_10": "{appName}, hem Android hem de iPhone'da mobil cihazlar için ve <a href=\"https://gleec.com/\">Windows, Mac ve Linux işletim sistemlerinde</a> masaüstü için kullanılabilir.",
     "@answer_10": {
         "type": "text",
         "placeholders_order": [
@@ -2333,7 +2333,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtKomodo": "Komodo Üzerinde Yapılmıştır",
+    "builtKomodo": "Gleec Üzerinde Yapılmıştır",
     "@builtKomodo": {
         "type": "text",
         "placeholders_order": [],
@@ -2837,13 +2837,13 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtOnKmd": "Komodo Üzerinde Yapılmıştır",
+    "builtOnKmd": "Gleec Üzerinde Yapılmıştır",
     "@builtOnKmd": {
         "type": "text",
         "placeholders_order": [],
         "placeholders": {}
     },
-    "poweredOnKmd": "Komodo tarafından geliştirilmiştir",
+    "poweredOnKmd": "Gleec tarafından geliştirilmiştir",
     "@poweredOnKmd": {
         "type": "text",
         "placeholders_order": [],
@@ -4129,7 +4129,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "dPow": "Komodo dPoW Koruması",
+    "dPow": "Gleec dPoW Koruması",
     "@dPow": {
         "type": "text",
         "placeholders_order": [],
@@ -5437,7 +5437,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "rebrandingAnnouncement": "Bu yeni bir dönem! 'AtomicDEX' olan ismimizi resmi olarak 'Komodo Wallet' olarak değiştirdik.",
+    "rebrandingAnnouncement": "Bu yeni bir dönem! 'AtomicDEX' olan ismimizi resmi olarak 'Gleec Wallet' olarak değiştirdik.",
     "@rebrandingAnnouncement": {
         "type": "text",
         "placeholders_order": [],

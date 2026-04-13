@@ -16897,5 +16897,107 @@
       "github": "https://github.com/seopub/zoincomumity",
       "homepage": "http://zoincommunity.com/"
     }
+  },
+  {
+    "coin": "NFT_ETH",
+    "name": "nft_ethereum",
+    "fname": "Ethereum",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 1,
+    "sign_message_prefix": "Ethereum Signed Message:\n",
+    "required_confirmations": 3,
+    "avg_blocktime": 15,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "ETH"
+      }
+    },
+    "derivation_path": "m/44'/60'"
+  },
+  {
+    "coin": "NFT_AVAX",
+    "name": "nft_avax",
+    "fname": "Avalanche",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 43114,
+    "required_confirmations": 3,
+    "avg_blocktime": 2.4,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "AVAX"
+      }
+    },
+    "derivation_path": "m/44'/9000'",
+    "trezor_coin": "Avalanche C-Chain",
+    "links": {
+      "homepage": "https://www.avax.network/"
+    }
+  },
+  {
+    "coin": "NFT_BNB",
+    "name": "nft_binancesmartchain",
+    "fname": "Binance Coin",
+    "avg_blocktime": 3,
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 56,
+    "required_confirmations": 3,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "BNB"
+      }
+    },
+    "derivation_path": "m/44'/714'",
+    "trezor_coin": "Binance Smart Chain",
+    "links": {
+      "homepage": "https://www.binance.org"
+    }
+  },
+  {
+    "coin": "NFT_FTM",
+    "name": "nft_ftm",
+    "fname": "Fantom",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 250,
+    "required_confirmations": 3,
+    "avg_blocktime": 1.8,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "FTM"
+      }
+    },
+    "derivation_path": "m/44'/1007'",
+    "trezor_coin": "Fantom Opera",
+    "links": {
+      "homepage": "https://fantom.foundation"
+    }
+  },
+  {
+    "coin": "NFT_MATIC",
+    "name": "nft_matic",
+    "fname": "Polygon",
+    "rpcport": 80,
+    "mm2": 1,
+    "chain_id": 137,
+    "avg_blocktime": 1.8,
+    "required_confirmations": 20,
+    "protocol": {
+      "type": "NFT",
+      "protocol_data": {
+        "platform": "MATIC"
+      }
+    },
+    "derivation_path": "m/44'/966'",
+    "trezor_coin": "Polygon",
+    "links": {
+      "homepage": "https://polygon.technology/"
+    }
   }
 ]

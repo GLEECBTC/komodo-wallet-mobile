@@ -488,7 +488,7 @@
       "appName": {}
     }
   },
-  "answer_2": "Other DEXs generally only allow you to trade assets that are based on a single blockchain network, use proxy tokens, and only allow placing a single order with the same funds.\n\n{appName} enables you to natively trade across two different blockchain networks without proxy tokens. You can also place multiple orders with the same funds. For example, you can sell 0.1 BTC for KMD, QTUM, or VRSC — the first order that fills automatically cancels all other orders.",
+  "answer_2": "Other DEXs generally only allow you to trade assets that are based on a single blockchain network, use proxy tokens, and only allow placing a single order with the same funds.\n\n{appName} enables you to natively trade across two different blockchain networks without proxy tokens. You can also place multiple orders with the same funds. For example, you can sell 0.1 BTC for GLEEC, QTUM, or VRSC — the first order that fills automatically cancels all other orders.",
   "@answer_2": {
     "type": "text",
     "placeholders_order": [
@@ -504,7 +504,7 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "answer_3": "Several factors determine the processing time for each swap. The block time of the traded assets depends on each network (Bitcoin typically being the slowest) Additionally, the user can customize security preferences. For example, you can ask {appName} to consider a KMD transaction as final after just 3 confirmations which makes the swap time shorter compared to waiting for a <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">notarization</a>.",
+  "answer_3": "Several factors determine the processing time for each swap. The block time of the traded assets depends on each network (Bitcoin typically being the slowest) Additionally, the user can customize security preferences. For example, you can ask {appName} to consider a GLEEC transaction as final after just 3 confirmations which makes the swap time shorter compared to waiting for a <a href=\"https://gleec.com/\">notarization</a>.",
   "@answer_3": {
     "type": "text",
     "placeholders_order": [
@@ -616,7 +616,7 @@
       "appName": {}
     }
   },
-  "answer_9": "Absolutely! You can read our <a href=\"https://developers.komodoplatform.com/\">developer documentation</a> for more details or contact us with your partnership inquiries. Have a specific technical question? The {appName} developer community is always ready to help!",
+  "answer_9": "Absolutely! You can read our <a href=\"https://gleec.com/\">developer documentation</a> for more details or contact us with your partnership inquiries. Have a specific technical question? The {appName} developer community is always ready to help!",
   "@answer_9": {
     "type": "text",
     "placeholders_order": [
@@ -636,7 +636,7 @@
       "appName": {}
     }
   },
-  "answer_10": "{appName} is available for mobile on both Android and iPhone, and for desktop on <a href=\"https://komodoplatform.com/\">Windows, Mac, and Linux operating systems</a>.",
+  "answer_10": "{appName} is available for mobile on both Android and iPhone, and for desktop on <a href=\"https://gleec.com/\">Windows, Mac, and Linux operating systems</a>.",
   "@answer_10": {
     "type": "text",
     "placeholders_order": [
@@ -2346,7 +2346,7 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "builtKomodo": "Built on Komodo",
+  "builtKomodo": "Built on Gleec",
   "@builtKomodo": {
     "type": "text",
     "placeholders_order": [],
@@ -2850,13 +2850,13 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "builtOnKmd": "Built on Komodo",
+  "builtOnKmd": "Built on Gleec",
   "@builtOnKmd": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
   },
-  "poweredOnKmd": "Powered by Komodo",
+  "poweredOnKmd": "Powered by Gleec",
   "@poweredOnKmd": {
     "type": "text",
     "placeholders_order": [],
@@ -4142,7 +4142,7 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "dPow": "Komodo dPoW security",
+  "dPow": "Gleec dPoW security",
   "@dPow": {
     "type": "text",
     "placeholders_order": [],
@@ -5450,7 +5450,7 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "rebrandingAnnouncement": "It's a new era! We have officially rebranded from 'AtomicDEX' to 'Komodo Wallet'",
+  "rebrandingAnnouncement": "It's a new era! We have officially rebranded from 'AtomicDEX' to 'Gleec Wallet'",
   "@rebrandingAnnouncement": {
     "type": "text",
     "placeholders_order": [],

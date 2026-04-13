@@ -487,7 +487,7 @@
             "appName": {}
         }
     },
-    "answer_2": "Bei anderen DEXs können Sie im Allgemeinen nur Assets handeln, die auf einem einzigen Blockchain-Netzwerk basieren, Proxy-Token verwenden und nur einen einzigen Auftrag mit denselben Geldmitteln aufgeben.\n\n{appName} ermöglicht Ihnen den nativen Handel über zwei verschiedene Blockchain-Netzwerke ohne Proxy-Tokens. Sie können auch mehrere Aufträge mit demselben Guthaben platzieren. Sie können zum Beispiel 0,1 BTC für KMD, QTUM oder VRSC verkaufen - der erste Auftrag, der ausgeführt wird, storniert automatisch alle anderen Aufträge.",
+    "answer_2": "Bei anderen DEXs können Sie im Allgemeinen nur Assets handeln, die auf einem einzigen Blockchain-Netzwerk basieren, Proxy-Token verwenden und nur einen einzigen Auftrag mit denselben Geldmitteln aufgeben.\n\n{appName} ermöglicht Ihnen den nativen Handel über zwei verschiedene Blockchain-Netzwerke ohne Proxy-Tokens. Sie können auch mehrere Aufträge mit demselben Guthaben platzieren. Sie können zum Beispiel 0,1 BTC für GLEEC, QTUM oder VRSC verkaufen - der erste Auftrag, der ausgeführt wird, storniert automatisch alle anderen Aufträge.",
     "@answer_2": {
         "type": "text",
         "placeholders_order": [
@@ -503,7 +503,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_3": "Mehrere Faktoren bestimmen die Bearbeitungszeit für einen Swap. Die Blockzeit der gehandelten Assets hängt vom jeweiligen Netzwerk ab (Bitcoin ist normalerweise das langsamste). Außerdem kann der Benutzer die Sicherheitseinstellungen anpassen. Zum Beispiel (können Sie {appName} bitten, eine KMD-Transaktion nach nur 3 Bestätigungen als endgültig zu betrachten, wodurch die Swap-Zeit kürzer wird als beim Warten auf eine <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">Beglaubigung</a>",
+    "answer_3": "Mehrere Faktoren bestimmen die Bearbeitungszeit für einen Swap. Die Blockzeit der gehandelten Assets hängt vom jeweiligen Netzwerk ab (Bitcoin ist normalerweise das langsamste). Außerdem kann der Benutzer die Sicherheitseinstellungen anpassen. Zum Beispiel (können Sie {appName} bitten, eine GLEEC-Transaktion nach nur 3 Bestätigungen als endgültig zu betrachten, wodurch die Swap-Zeit kürzer wird als beim Warten auf eine <a href=\"https://gleec.com/\">Beglaubigung</a>",
     "@answer_3": {
         "type": "text",
         "placeholders_order": [
@@ -615,7 +615,7 @@
             "appName": {}
         }
     },
-    "answer_9": "Absolut! Weitere Informationen finden Sie in unserer <a href=\"https://developers.komodoplatform.com/\">Entwicklerdokumentation</a> oder kontaktieren Sie uns mit Ihren Partnerschaftsanfragen. Haben Sie eine spezielle technische Frage? Die {appName}-Entwickler-Community ist immer bereit zu helfen!",
+    "answer_9": "Absolut! Weitere Informationen finden Sie in unserer <a href=\"https://gleec.com/\">Entwicklerdokumentation</a> oder kontaktieren Sie uns mit Ihren Partnerschaftsanfragen. Haben Sie eine spezielle technische Frage? Die {appName}-Entwickler-Community ist immer bereit zu helfen!",
     "@answer_9": {
         "type": "text",
         "placeholders_order": [
@@ -635,7 +635,7 @@
             "appName": {}
         }
     },
-    "answer_10": "{appName} ist für Mobilgeräte auf Android und iPhone sowie für Desktops auf <a href=\"https://komodoplatform.com/\">Windows-, Mac- und Linux-Betriebssystemen</a> verfügbar.",
+    "answer_10": "{appName} ist für Mobilgeräte auf Android und iPhone sowie für Desktops auf <a href=\"https://gleec.com/\">Windows-, Mac- und Linux-Betriebssystemen</a> verfügbar.",
     "@answer_10": {
         "type": "text",
         "placeholders_order": [
@@ -2345,7 +2345,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtKomodo": "Auf Komodo aufgebaut",
+    "builtKomodo": "Auf Gleec aufgebaut",
     "@builtKomodo": {
         "type": "text",
         "placeholders_order": [],
@@ -2849,13 +2849,13 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtOnKmd": "Auf Komodo aufgebaut",
+    "builtOnKmd": "Auf Gleec aufgebaut",
     "@builtOnKmd": {
         "type": "text",
         "placeholders_order": [],
         "placeholders": {}
     },
-    "poweredOnKmd": "Unterstützt von Komodo",
+    "poweredOnKmd": "Unterstützt von Gleec",
     "@poweredOnKmd": {
         "type": "text",
         "placeholders_order": [],
@@ -4141,7 +4141,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "dPow": "Komodo dPoW Sicherheit",
+    "dPow": "Gleec dPoW Sicherheit",
     "@dPow": {
         "type": "text",
         "placeholders_order": [],
@@ -5449,7 +5449,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "rebrandingAnnouncement": "Es ist eine neue Ära! Wir haben unseren Namen offiziell von „AtomicDEX“ in „Komodo Wallet“ geändert.",
+    "rebrandingAnnouncement": "Es ist eine neue Ära! Wir haben unseren Namen offiziell von „AtomicDEX“ in „Gleec Wallet“ geändert.",
     "@rebrandingAnnouncement": {
         "type": "text",
         "placeholders_order": [],

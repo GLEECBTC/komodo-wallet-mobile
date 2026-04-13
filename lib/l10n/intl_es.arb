@@ -487,7 +487,7 @@
             "appName": {}
         }
     },
-    "answer_2": "Por lo general, otros DEX solo le permiten intercambiar monedas digitales que se basan en una sola red blockchain y solo permiten realizar un solo pedido con los mismos fondos.\n\n{appName} le permite intercambiar de forma nativa en blockchains diferentes. También puede realizar varios pedidos con los mismos fondos. Por ejemplo, puede vender 0.1 BTC por KMD, QTUM o VRSC: el primer pedido que se ejecuta automáticamente cancela todos los demás pedidos.",
+    "answer_2": "Por lo general, otros DEX solo le permiten intercambiar monedas digitales que se basan en una sola red blockchain y solo permiten realizar un solo pedido con los mismos fondos.\n\n{appName} le permite intercambiar de forma nativa en blockchains diferentes. También puede realizar varios pedidos con los mismos fondos. Por ejemplo, puede vender 0.1 BTC por GLEEC, QTUM o VRSC: el primer pedido que se ejecuta automáticamente cancela todos los demás pedidos.",
     "@answer_2": {
         "type": "text",
         "placeholders_order": [
@@ -503,7 +503,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_3": "Varios factores determinan el tiempo de procesamiento de cada intercambio. El tiempo de procesar una transacción depende de cada red (Bitcoin suele ser la más lenta). Además, el usuario puede personalizar las preferencias de seguridad. Por ejemplo, puede pedirle a {appName} que considere una transacción KMD procesada despues de solo 3 confirmaciones, lo que hace que el tiempo de intercambio sea más corto en comparación con la espera de una <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">notarization</a>.",
+    "answer_3": "Varios factores determinan el tiempo de procesamiento de cada intercambio. El tiempo de procesar una transacción depende de cada red (Bitcoin suele ser la más lenta). Además, el usuario puede personalizar las preferencias de seguridad. Por ejemplo, puede pedirle a {appName} que considere una transacción GLEEC procesada despues de solo 3 confirmaciones, lo que hace que el tiempo de intercambio sea más corto en comparación con la espera de una <a href=\"https://gleec.com/\">notarization</a>.",
     "@answer_3": {
         "type": "text",
         "placeholders_order": [
@@ -615,7 +615,7 @@
             "appName": {}
         }
     },
-    "answer_9": "¡Absolutamente! Puede leer nuestra <a href=\"https://developers.komodoplatform.com/\">documentación para desarrolladores</a> para obtener más detalles o contactarnos con sus consultas sobre asociaciones. ¿Tiene una pregunta técnica específica? ¡La comunidad de desarrolladores de {appName} siempre está lista para ayudar!",
+    "answer_9": "¡Absolutamente! Puede leer nuestra <a href=\"https://gleec.com/\">documentación para desarrolladores</a> para obtener más detalles o contactarnos con sus consultas sobre asociaciones. ¿Tiene una pregunta técnica específica? ¡La comunidad de desarrolladores de {appName} siempre está lista para ayudar!",
     "@answer_9": {
         "type": "text",
         "placeholders_order": [
@@ -635,7 +635,7 @@
             "appName": {}
         }
     },
-    "answer_10": "{appName} está disponible para dispositivos móviles en Android y iPhone, y para computadoras de escritorio en <a href=\"https://komodoplatform.com/\">sistemas operativos Windows, Mac y Linux</a>.",
+    "answer_10": "{appName} está disponible para dispositivos móviles en Android y iPhone, y para computadoras de escritorio en <a href=\"https://gleec.com/\">sistemas operativos Windows, Mac y Linux</a>.",
     "@answer_10": {
         "type": "text",
         "placeholders_order": [
@@ -2313,7 +2313,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtKomodo": "Construido en Komodo",
+    "builtKomodo": "Construido en Gleec",
     "@builtKomodo": {
         "type": "text",
         "placeholders_order": [],
@@ -2817,13 +2817,13 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtOnKmd": "Construido en Komodo",
+    "builtOnKmd": "Construido en Gleec",
     "@builtOnKmd": {
         "type": "text",
         "placeholders_order": [],
         "placeholders": {}
     },
-    "poweredOnKmd": "Desarrollado por Komodo",
+    "poweredOnKmd": "Desarrollado por Gleec",
     "@poweredOnKmd": {
         "type": "text",
         "placeholders_order": [],
@@ -4099,7 +4099,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "dPow": "Seguridad de Komodo dPoW",
+    "dPow": "Seguridad de Gleec dPoW",
     "@dPow": {
         "type": "text",
         "placeholders_order": [],
@@ -5407,7 +5407,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "rebrandingAnnouncement": "¡Es una nueva era! Hemos cambiado oficialmente nuestro nombre de 'AtomicDEX' a 'Komodo Wallet'",
+    "rebrandingAnnouncement": "¡Es una nueva era! Hemos cambiado oficialmente nuestro nombre de 'AtomicDEX' a 'Gleec Wallet'",
     "@rebrandingAnnouncement": {
         "type": "text",
         "placeholders_order": [],

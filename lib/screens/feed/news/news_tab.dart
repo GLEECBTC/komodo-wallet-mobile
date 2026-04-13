@@ -52,8 +52,10 @@ class _NewsTabState extends State<NewsTab> {
 
     return Column(
       children: <Widget>[
+        /*
         if (rebrandingProvider.shouldShowRebrandingNews)
           RebrandingDialog(isModal: false),
+        */
         _buildUpdateIndicator(),
         Expanded(
           child: RefreshIndicator(

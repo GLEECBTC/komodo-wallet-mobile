@@ -487,7 +487,7 @@
             "appName": {}
         }
     },
-    "answer_2": "다른 DEX는 일반적으로 단일 블록체인 네트워크를 기반으로 하는 자산 거래, 프록시 토큰 사용, 같은 펀드에서 단일 주문만 가능합니다.\n\n{appName}을 사용하면 프록시 토큰 없이 두 개의 다른 블록체인 네트워크 간에 기본적으로 교환할 수 있습니다. 같은 자금으로 여러 개를 주문할 수도 있습니다. 예를 들어, KMD, QTUM 또는 VRSC으로 0.1 BTC를 판매할 수 있습니다. 첫 주문이 가득 차면 다른 모든 주문이 자동으로 취소됩니다.",
+    "answer_2": "다른 DEX는 일반적으로 단일 블록체인 네트워크를 기반으로 하는 자산 거래, 프록시 토큰 사용, 같은 펀드에서 단일 주문만 가능합니다.\n\n{appName}을 사용하면 프록시 토큰 없이 두 개의 다른 블록체인 네트워크 간에 기본적으로 교환할 수 있습니다. 같은 자금으로 여러 개를 주문할 수도 있습니다. 예를 들어, GLEEC, QTUM 또는 VRSC으로 0.1 BTC를 판매할 수 있습니다. 첫 주문이 가득 차면 다른 모든 주문이 자동으로 취소됩니다.",
     "@answer_2": {
         "type": "text",
         "placeholders_order": [
@@ -503,7 +503,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_3": "각 스왑의 처리 시간은 몇 가지 요인에 의해 결정됩니다. 거래되는 자산의 블록 시간은 네트워크마다 다릅니다(보통 비트코인이 가장 느립니다). 게다가 사용자는 보안 설정을 커스터마이징 할 수 있습니다. 예를 들어 3번의 확인 후 {appName}에게 KMD 트랜잭션을 최종적으로 고려하도록 요구할 수 있습니다, 이는 <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">공증</a>을 기다리는 것보다 스와프 시간이 짧아집니다.",
+    "answer_3": "각 스왑의 처리 시간은 몇 가지 요인에 의해 결정됩니다. 거래되는 자산의 블록 시간은 네트워크마다 다릅니다(보통 비트코인이 가장 느립니다). 게다가 사용자는 보안 설정을 커스터마이징 할 수 있습니다. 예를 들어 3번의 확인 후 {appName}에게 GLEEC 트랜잭션을 최종적으로 고려하도록 요구할 수 있습니다, 이는 <a href=\"https://gleec.com/\">공증</a>을 기다리는 것보다 스와프 시간이 짧아집니다.",
     "@answer_3": {
         "type": "text",
         "placeholders_order": [
@@ -615,7 +615,7 @@
             "appName": {}
         }
     },
-    "answer_9": "전적으로! 자세한 내용은 <a href=\"https://developers.komodoplatform.com/\">개발자 문서</a>를 참조하거나 파트너십 문의 사항이 있는 경우 문의해 주세요. 특정 기술 질문이 있습니까? {appName} 개발자 커뮤니티는 항상 도울 준비가 되어 있습니다!",
+    "answer_9": "전적으로! 자세한 내용은 <a href=\"https://gleec.com/\">개발자 문서</a>를 참조하거나 파트너십 문의 사항이 있는 경우 문의해 주세요. 특정 기술 질문이 있습니까? {appName} 개발자 커뮤니티는 항상 도울 준비가 되어 있습니다!",
     "@answer_9": {
         "type": "text",
         "placeholders_order": [
@@ -635,7 +635,7 @@
             "appName": {}
         }
     },
-    "answer_10": "{appName}은(는) Android 및 iPhone의 모바일과 <a href=\"https://komodoplatform.com/\">Windows, Mac 및 Linux 운영 체제</a>의 데스크톱에서 사용할 수 있습니다.",
+    "answer_10": "{appName}은(는) Android 및 iPhone의 모바일과 <a href=\"https://gleec.com/\">Windows, Mac 및 Linux 운영 체제</a>의 데스크톱에서 사용할 수 있습니다.",
     "@answer_10": {
         "type": "text",
         "placeholders_order": [
@@ -4141,7 +4141,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "dPow": "Komodo dPoW 보안",
+    "dPow": "Gleec dPoW 보안",
     "@dPow": {
         "type": "text",
         "placeholders_order": [],
@@ -5449,7 +5449,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "rebrandingAnnouncement": "새로운 시대입니다! 'AtomicDEX'에서 'Komodo Wallet'으로 공식 명칭을 변경하였습니다.",
+    "rebrandingAnnouncement": "새로운 시대입니다! 'AtomicDEX'에서 'Gleec Wallet'으로 공식 명칭을 변경하였습니다.",
     "@rebrandingAnnouncement": {
         "type": "text",
         "placeholders_order": [],

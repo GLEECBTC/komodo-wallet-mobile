@@ -1,4 +1,4 @@
-package com.komodoplatform.atomicdex;
+package com.gleec.gleecdex;
 
 import android.Manifest;
 import android.app.Activity;
@@ -89,9 +89,9 @@ public class MainActivity extends FlutterFragmentActivity {
   private void createNotificationChannel() {
     // TBD: Use AndroidX to create the channel.
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-      NotificationChannel channel = new NotificationChannel("com.komodoplatform.atomicdex/notification",
+      NotificationChannel channel = new NotificationChannel("com.gleec.gleecdex/notification",
           "General notifications", NotificationManager.IMPORTANCE_HIGH);
-      channel.setDescription("Komodo Wallet general notifications");
+      channel.setDescription("Gleec Wallet general notifications");
       channel.enableLights(true);
       channel.setLightColor(0xFF64ffbf);
       channel.enableVibration(true);
@@ -110,7 +110,7 @@ public class MainActivity extends FlutterFragmentActivity {
   void createNotification(String title, String text, int uid) {Activity activity = (Activity) (Object) this;
     NotificationCompat.Builder builder = new NotificationCompat
     .Builder(activity,
-        "com.komodoplatform.atomicdex/notification")
+        "com.gleec.gleecdex/notification")
         .setSmallIcon(R.mipmap.ic_launcher_round)
         .setContentTitle(title)
         .setContentText(text)
@@ -131,7 +131,7 @@ public class MainActivity extends FlutterFragmentActivity {
 
     BinaryMessenger bm = flutterEngine.getDartExecutor().getBinaryMessenger();
     // https://flutter.dev/docs/development/platform-integration/platform-channels?tab=android-channel-kotlin-tab#step-3-add-an-android-platform-specific-implementation
-    new MethodChannel(bm, "com.komodoplatform.atomicdex/nativeC")
+    new MethodChannel(bm, "com.gleec.gleecdex/nativeC")
         .setMethodCallHandler(new MethodChannel.MethodCallHandler() {
           @Override
           public void onMethodCall(MethodCall call, MethodChannel.Result result) {
@@ -249,13 +249,13 @@ public class MainActivity extends FlutterFragmentActivity {
   void getPaymentUri(Intent intent) {
     paymentUri = intent.getData();
   }
-  /// Corresponds to Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2MainStatus in main.cpp
+  /// Corresponds to Java_com_gleec_gleecdex_MainActivity_nativeMm2MainStatus in main.cpp
   private native byte nativeMm2MainStatus();
 
-  /// Corresponds to Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2Main in main.cpp
+  /// Corresponds to Java_com_gleec_gleecdex_MainActivity_nativeMm2Main in main.cpp
   private native byte nativeMm2Main(String conf, JNILogListener listener);
 
-  /// Corresponds to Java_com_komodoplatform_atomicdex_MainActivity_nativeMm2Stop in main.cpp
+  /// Corresponds to Java_com_gleec_gleecdex_MainActivity_nativeMm2Stop in main.cpp
   private native byte nativeMm2Stop();
 
   @Override

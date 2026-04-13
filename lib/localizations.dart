@@ -238,9 +238,7 @@ class AppLocalizations {
       ' customize security preferences. For example, you can ask $appName'
       ' to consider a KMD transaction as final after just 3 confirmations'
       ' which makes the swap time shorter compared to waiting'
-      ' for a <a href="'
-      'https://komodoplatform.com/security-delayed-proof-of-work-dpow/'
-      '">notarization</a>.',
+      ' for a notarization.',
       name: 'answer_3',
       args: [appName]);
   String get question_4 =>
@@ -299,8 +297,7 @@ class AppLocalizations {
       args: [appName]);
   String answer_9(String appName) => Intl.message(
       'Absolutely! You can read our'
-      ' <a href="https://developers.komodoplatform.com/">'
-      'developer documentation</a> for more'
+      ' developer documentation for more'
       ' details or contact us with your partnership inquiries. Have a specific'
       ' technical question? The $appName developer community'
       ' is always ready to help!',
@@ -311,7 +308,7 @@ class AppLocalizations {
           name: 'question_10', args: [appName]);
   String answer_10(String appName) => Intl.message(
       '$appName is available for mobile on both Android and iPhone,'
-      ' and for desktop on <a href="https://komodoplatform.com/">'
+      ' and for desktop on <a href="https://gleec.com/">'
       'Windows, Mac, and Linux operating systems</a>.',
       name: 'answer_10',
       args: [appName]);
@@ -850,8 +847,7 @@ class AppLocalizations {
           name: 'notEnoughtBalanceForFee');
   String get noInternet =>
       Intl.message('No Internet Connection', name: 'noInternet');
-  String get builtKomodo =>
-      Intl.message('Built on Komodo', name: 'builtKomodo');
+  String get builtKomodo => Intl.message('Built on Gleec', name: 'builtKomodo');
   String get pleaseAddCoin =>
       Intl.message('Please Add A Coin', name: 'pleaseAddCoin');
   String get internetRestored =>
@@ -1009,9 +1005,9 @@ class AppLocalizations {
   String get tagETC => Intl.message('ETC', name: 'tagETC');
   String get tagSBCH => Intl.message('SBCH', name: 'tagSBCH');
   String get tagUBQ => Intl.message('UBQ', name: 'tagUBQ');
-  String get builtOnKmd => Intl.message('Built on Komodo', name: 'builtOnKmd');
+  String get builtOnKmd => Intl.message('Built on Gleec', name: 'builtOnKmd');
   String get poweredOnKmd =>
-      Intl.message('Powered by Komodo', name: 'poweredOnKmd');
+      Intl.message('Powered by Gleec', name: 'poweredOnKmd');
 
   String errorNotEnoughGas(String gas) =>
       Intl.message('Not enough gas - use at least $gas Gwei',
@@ -1445,7 +1441,7 @@ class AppLocalizations {
       Intl.message('OFF', name: 'protectionCtrlOff');
   String get protectionCtrlConfirmations =>
       Intl.message('Confirmations', name: 'protectionCtrlConfirmations');
-  String get dPow => Intl.message('Komodo dPoW security', name: 'dPow');
+  String get dPow => Intl.message('Gleec dPoW security', name: 'dPow');
   String get protectionCtrlCustom =>
       Intl.message('Use custom protection settings',
           name: 'protectionCtrlCustom');
@@ -1896,7 +1892,7 @@ class AppLocalizations {
 
   // Rebranding
   String get rebrandingAnnouncement => Intl.message(
-      "It's a new era! We have officially rebranded from 'AtomicDEX' to 'Komodo Wallet'",
+      "It's a new era! We have officially rebranded from 'AtomicDEX' to 'Gleec Wallet'",
       name: 'rebrandingAnnouncement');
 
   String get officialPressRelease =>
@@ -1965,7 +1961,6 @@ class AppLocalizations {
         name: 'pastTransactionsFromDate',
       );
   // ---
-
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

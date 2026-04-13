@@ -38,13 +38,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "아니요! ${appName}은 정보를 보관하지 않습니다. 키, 시드 문구, 비밀번호 등 기밀 데이터는 저장되지 않습니다. 이 데이터는 사용자의 장치에만 저장되며, 시스템에는 저장되지 않습니다. 당신은 자산을 완전히 관리하고 있습니다.";
 
   static m8(appName) =>
-      "${appName}은(는) Android 및 iPhone의 모바일과 <a href=\"https://komodoplatform.com/\">Windows, Mac 및 Linux 운영 체제</a>의 데스크톱에서 사용할 수 있습니다.";
+      "${appName}은(는) Android 및 iPhone의 모바일과 <a href=\"https://gleec.com/\">Windows, Mac 및 Linux 운영 체제</a>의 데스크톱에서 사용할 수 있습니다.";
 
   static m9(appName) =>
       "다른 DEX는 일반적으로 단일 블록체인 네트워크를 기반으로 하는 자산 거래, 프록시 토큰 사용, 같은 펀드에서 단일 주문만 가능합니다.\n\n${appName}을 사용하면 프록시 토큰 없이 두 개의 다른 블록체인 네트워크 간에 기본적으로 교환할 수 있습니다. 같은 자금으로 여러 개를 주문할 수도 있습니다. 예를 들어, KMD, QTUM 또는 VRSC으로 0.1 BTC를 판매할 수 있습니다. 첫 주문이 가득 차면 다른 모든 주문이 자동으로 취소됩니다.";
 
   static m10(appName) =>
-      "각 스왑의 처리 시간은 몇 가지 요인에 의해 결정됩니다. 거래되는 자산의 블록 시간은 네트워크마다 다릅니다(보통 비트코인이 가장 느립니다). 게다가 사용자는 보안 설정을 커스터마이징 할 수 있습니다. 예를 들어 3번의 확인 후 ${appName}에게 KMD 트랜잭션을 최종적으로 고려하도록 요구할 수 있습니다, 이는 <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">공증</a>을 기다리는 것보다 스와프 시간이 짧아집니다.";
+      "각 스왑의 처리 시간은 몇 가지 요인에 의해 결정됩니다. 거래되는 자산의 블록 시간은 네트워크마다 다릅니다(보통 비트코인이 가장 느립니다). 게다가 사용자는 보안 설정을 커스터마이징 할 수 있습니다. 예를 들어 3번의 확인 후 ${appName}에게 KMD 트랜잭션을 최종적으로 고려하도록 요구할 수 있습니다, 이는 <a href=\"https://gleec.com/\">공증</a>을 기다리는 것보다 스와프 시간이 짧아집니다.";
 
   static m11(appName) =>
       "${appName}에서 거래할 때 고려해야 할 두 가지 수수료 카테고리가 있습니다.\n\n1. ${appName}은 수주자의 거래 수수료로 약 0.13%으로(거래량의 1/777 이상 0.0001 이하)를 청구하며 제조사의 주문은 수수료가 제로입니다.\n\n2. 원자력 스와프 거래를 할 때는 제조사와 수험자 모두 관련된 블록체인에 정상적인 네트워크 요금을 지불해야 합니다.\n\n네트워크 요금은 선택한 거래 쌍에 따라 크게 다를 수 있습니다.";
@@ -59,7 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${appName}은 ${appCompanyShort} 팁에서 개발되었습니다. ${appCompanyShort}는 원자력 스왑, 지연 작업 증명, 상호 운용 가능한 멀티체인 아키텍처 등의 혁신적인 솔루션을 추진하고 있는 가장 확립된 블록체인 프로젝트 중 하나입니다.";
 
   static m15(appName) =>
-      "전적으로! 자세한 내용은 <a href=\"https://developers.komodoplatform.com/\">개발자 문서</a>를 참조하거나 파트너십 문의 사항이 있는 경우 문의해 주세요. 특정 기술 질문이 있습니까? ${appName} 개발자 커뮤니티는 항상 도울 준비가 되어 있습니다!";
+      "전적으로! 자세한 내용은 <a href=\"https://gleec.com/\">개발자 문서</a>를 참조하거나 파트너십 문의 사항이 있는 경우 문의해 주세요. 특정 기술 질문이 있습니까? ${appName} 개발자 커뮤니티는 항상 도울 준비가 되어 있습니다!";
 
   static m16(coinName1, coinName2) => "${coinName1}/${coinName2} 기준";
 
@@ -510,7 +510,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFeeWarning": MessageLookupByLibrary.simpleMessage(
             "당신이 무엇을 하고 있는지 알고 있는 경우에만 관세비용을 사용하세요!"),
         "customSeedWarning": m28,
-        "dPow": MessageLookupByLibrary.simpleMessage("Komodo dPoW 보안"),
+        "dPow": MessageLookupByLibrary.simpleMessage("Gleec dPoW 보안"),
         "date": MessageLookupByLibrary.simpleMessage("날짜"),
         "decryptingWallet": MessageLookupByLibrary.simpleMessage("지갑 해석 중"),
         "delete": MessageLookupByLibrary.simpleMessage("삭제"),
@@ -1043,7 +1043,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question_8": m90,
         "question_9": m91,
         "rebrandingAnnouncement": MessageLookupByLibrary.simpleMessage(
-            "새로운 시대입니다! \'AtomicDEX\'에서 \'Komodo Wallet\'으로 공식 명칭을 변경하였습니다."),
+            "새로운 시대입니다! \'AtomicDEX\'에서 \'Gleec Wallet\'으로 공식 명칭을 변경하였습니다."),
         "receive": MessageLookupByLibrary.simpleMessage("받기"),
         "receiveLower": MessageLookupByLibrary.simpleMessage("받기"),
         "recommendSeedMessage":

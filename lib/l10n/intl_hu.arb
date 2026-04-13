@@ -487,7 +487,7 @@
             "appName": {}
         }
     },
-    "answer_2": "Más DEX-ek általában csak olyan eszközökkel lehet kereskedni, amelyek egyetlen blokklánc-hálózaton alapulnak, proxy tokeneket használnak, és csak egyetlen megbízás leadását teszik lehetővé ugyanazokkal az eszközökkel.\n\nAz {appName} lehetővé teszi, hogy natívan, proxy tokenek nélkül kereskedhessen két különböző blokklánc hálózaton. Több megbízást is adhat ugyanazokkal az alapokkal. Például 0,1 BTC-t adhatsz el KMD, QTUM vagy VRSC ellenében - az első teljesített megbízás automatikusan törli az összes többi megbízást.",
+    "answer_2": "Más DEX-ek általában csak olyan eszközökkel lehet kereskedni, amelyek egyetlen blokklánc-hálózaton alapulnak, proxy tokeneket használnak, és csak egyetlen megbízás leadását teszik lehetővé ugyanazokkal az eszközökkel.\n\nAz {appName} lehetővé teszi, hogy natívan, proxy tokenek nélkül kereskedhessen két különböző blokklánc hálózaton. Több megbízást is adhat ugyanazokkal az alapokkal. Például 0,1 BTC-t adhatsz el GLEEC, QTUM vagy VRSC ellenében - az első teljesített megbízás automatikusan törli az összes többi megbízást.",
     "@answer_2": {
         "type": "text",
         "placeholders_order": [
@@ -503,7 +503,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "answer_3": "Az egyes swapok feldolgozási idejét több tényező határozza meg. A kereskedett eszközök blokkolási ideje az egyes hálózatoktól függ (a Bitcoin jellemzően a leglassabb) Ezen kívül a felhasználó testre szabhatja a biztonsági beállításokat. Például kérheti az {appName}-t, hogy egy KMD tranzakciót már 3 megerősítés után véglegesnek tekintsen, ami rövidebbé teszi a csereidőt, mintha <a href=\"https://komodoplatform.com/security-delayed-proof-of-work-dpow/\">jegyesítésre</a> kellene várni.",
+    "answer_3": "Az egyes swapok feldolgozási idejét több tényező határozza meg. A kereskedett eszközök blokkolási ideje az egyes hálózatoktól függ (a Bitcoin jellemzően a leglassabb) Ezen kívül a felhasználó testre szabhatja a biztonsági beállításokat. Például kérheti az {appName}-t, hogy egy GLEEC tranzakciót már 3 megerősítés után véglegesnek tekintsen, ami rövidebbé teszi a csereidőt, mintha <a href=\"https://gleec.com/\">jegyesítésre</a> kellene várni.",
     "@answer_3": {
         "type": "text",
         "placeholders_order": [
@@ -615,7 +615,7 @@
             "appName": {}
         }
     },
-    "answer_9": "Teljesen! További részletekért olvassa el <a href=\"https://developers.komodoplatform.com/\">fejlesztői dokumentációnkat</a>, vagy forduljon hozzánk partnerségi kérdéseivel. Konkrét technikai kérdése van? A {appName} fejlesztői közössége mindig készen áll a segítségére!",
+    "answer_9": "Teljesen! További részletekért olvassa el <a href=\"https://gleec.com/\">fejlesztői dokumentációnkat</a>, vagy forduljon hozzánk partnerségi kérdéseivel. Konkrét technikai kérdése van? A {appName} fejlesztői közössége mindig készen áll a segítségére!",
     "@answer_9": {
         "type": "text",
         "placeholders_order": [
@@ -635,7 +635,7 @@
             "appName": {}
         }
     },
-    "answer_10": "Az {appName} mobilra Androidon és iPhone-on, asztali számítógépen pedig <a href=\"https://komodoplatform.com/\">Windows, Mac és Linux operációs rendszeren</a> érhető el.",
+    "answer_10": "Az {appName} mobilra Androidon és iPhone-on, asztali számítógépen pedig <a href=\"https://gleec.com/\">Windows, Mac és Linux operációs rendszeren</a> érhető el.",
     "@answer_10": {
         "type": "text",
         "placeholders_order": [
@@ -2345,7 +2345,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtKomodo": "Komodo rendszerrel fejlesztve",
+    "builtKomodo": "Gleec rendszerrel fejlesztve",
     "@builtKomodo": {
         "type": "text",
         "placeholders_order": [],
@@ -2849,13 +2849,13 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "builtOnKmd": "Komodo rendszerrel fejlesztve",
+    "builtOnKmd": "Gleec rendszerrel fejlesztve",
     "@builtOnKmd": {
         "type": "text",
         "placeholders_order": [],
         "placeholders": {}
     },
-    "poweredOnKmd": "Komodo által működtetett",
+    "poweredOnKmd": "Gleec által működtetett",
     "@poweredOnKmd": {
         "type": "text",
         "placeholders_order": [],
@@ -4141,7 +4141,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "dPow": "Komodo dPoW biztonság",
+    "dPow": "Gleec dPoW biztonság",
     "@dPow": {
         "type": "text",
         "placeholders_order": [],
@@ -5449,7 +5449,7 @@
         "placeholders_order": [],
         "placeholders": {}
     },
-    "rebrandingAnnouncement": "Ez egy új korszak! Hivatalosan megváltoztattuk a nevünket „AtomicDEX”-ről „Komodo Wallet”-ra",
+    "rebrandingAnnouncement": "Ez egy új korszak! Hivatalosan megváltoztattuk a nevünket „AtomicDEX”-ről „Gleec Wallet”-ra",
     "@rebrandingAnnouncement": {
         "type": "text",
         "placeholders_order": [],
