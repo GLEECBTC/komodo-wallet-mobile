@@ -207,7 +207,7 @@
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3AU3KU35KZ;
+						DevelopmentTeam = B52ZCS7TMQ;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -471,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
-				DEVELOPMENT_TEAM = 3AU3KU35KZ;
+				DEVELOPMENT_TEAM = B52ZCS7TMQ;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -488,7 +488,7 @@
 					"$(PROJECT_DIR)/Flutter",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GleecDEX.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GleecDEX.wallet.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -620,7 +620,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
-				DEVELOPMENT_TEAM = 3AU3KU35KZ;
+				DEVELOPMENT_TEAM = B52ZCS7TMQ;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,7 +637,7 @@
 					"$(PROJECT_DIR)/Flutter",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GleecDEX.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GleecDEX.wallet.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -658,7 +658,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
-				DEVELOPMENT_TEAM = 3AU3KU35KZ;
+				DEVELOPMENT_TEAM = B52ZCS7TMQ;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -675,7 +675,7 @@
 					"$(PROJECT_DIR)/Flutter",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GleecDEX.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GleecDEX.wallet.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
